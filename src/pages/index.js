@@ -35,3 +35,14 @@ export const query = graphql`
         }
     }
 `;
+export const Head = () => (
+    <>
+        <title>祭：お好み焼き居酒屋 プラハ</title>
+        <meta name="description" content="This is the homepage…" />
+        {/* <!-- reset.css ress --> */}
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/ress/dist/ress.min.css"
+        />
+    </>
+);

@@ -1,7 +1,9 @@
 .header {
     background: gainsboro;
     &__links {
-        display: flex;
+        @media screen and (min-width: (767px)) {
+            display: flex;
+        }
         a {
             margin: 0 20px;
         }
