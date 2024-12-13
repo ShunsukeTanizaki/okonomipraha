@@ -8,5 +8,22 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  plugins: [],
-}
+    plugins: [
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/locales`,
+                name: `locale`,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-react-i18next`,
+            options: {
+                localeJsonSourceName: `locale`,
+                languages: [`cs`, `en`, `ja`],
+                defaultLanguage: `ja`, // TODO: 最後にcsに変更
+            },
+        },
+        `gatsby-plugin-sass`,
+    ],
+};
