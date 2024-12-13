@@ -1,0 +1,9 @@
+.footer {
+    background: #2b0809;
+    &__links {
+        display: flex;
+        p {
+            margin: 0 20px;
+        }
+    }
+}

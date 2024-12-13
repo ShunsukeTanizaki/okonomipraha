@@ -1,1 +1,6 @@
-@import 'header';
+@use './header.scss';
+@use './footer.scss';
+
+body {
+    background: #f7f3e1;
+}

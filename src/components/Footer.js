@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link, useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 
-const Header = () => {
+const Footer = () => {
     const { languages, originalPath } = useI18next();
     const { t } = useTranslation();
     return (
-        <div className="header">
-            <p>Header</p>
-            <div className="header__links">
+        <div className="footer">
+            <p>Footer</p>
+            <div className="footer__links">
                 <Link to="/">{t('Home')}</Link>
-                <Link to="/menu">{t('Menu')}</Link>
-                <Link to="/takeaway">{t('Takeaway')}</Link>
-                <ul className="header__links--languages">
+                <p>{t('Contact')}</p>
+                <p>{t('Address')}</p>
+                {/* <ul className="footer__links--languages">
                     {languages.map((lng) => (
                         <li key={lng}>
                             <Link to={originalPath} language={lng}>
@@ -19,10 +19,10 @@ const Header = () => {
                             </Link>
                         </li>
                     ))}
-                </ul>
+                </ul> */}
             </div>
         </div>
     );
 };
 
-export default Header;
+export default Footer;
