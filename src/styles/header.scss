@@ -1,0 +1,17 @@
+.header {
+    background: gainsboro;
+    &__links {
+        @media screen and (min-width: (767px)) {
+            display: flex;
+        }
+        a {
+            margin: 0 20px;
+        }
+        &--languages {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    }
+}

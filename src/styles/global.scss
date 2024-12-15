@@ -1,0 +1,11 @@
+@charset 'UTF-8';
+@use './header.scss';
+@use './footer.scss';
+
+body {
+    background: #f7f3e1;
+}
+
+li {
+    list-style: none;
+}
