@@ -34,5 +34,13 @@ module.exports = {
                 path: `${__dirname}/src/images`,
             },
         },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `takeaway`,
+                path: `${__dirname}/src/data/`,
+            },
+        },
+        `gatsby-transformer-json`, // JSONファイルの変換
     ],
 };

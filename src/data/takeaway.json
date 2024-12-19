@@ -1,0 +1,128 @@
+[
+    {
+        "id": "M-1",
+        "name": "Osaka style plain",
+        "grams": "400g",
+        "price": "180",
+        "image": "../images/m-1.jpg",
+        "emoji": "🍀",
+        "note": "🐟Tuna flake"
+    },
+    {
+        "id": "M-2",
+        "name": "Osaka Pork grill veg.",
+        "grams": "600g",
+        "price": "280",
+        "image": "../images/m-2.jpg",
+        "emoji": "🐽",
+        "note": "🐟Tuna flake"
+    },
+    {
+        "id": "M-3",
+        "name": "Osaka Chicken Egg",
+        "grams": "600g",
+        "price": "280",
+        "image": "../images/m-3.jpg",
+        "emoji": "🐓🍳",
+        "note": "🐟Tuna flake"
+    },
+    {
+        "id": "M-4",
+        "name": "Osaka Seafood",
+        "grams": "600g",
+        "price": "320",
+        "image": "../images/m-4.jpg",
+        "emoji": "🦐🦑🐟",
+        "note": null
+    },
+    {
+        "id": "M-5",
+        "name": "Chicken Omu Rice",
+        "grams": "450g",
+        "price": "280",
+        "image": "../images/m-5.jpg",
+        "emoji": "🐓🍳🍄🟫",
+        "note": "Soft omelet topped on fried rice"
+    },
+    {
+        "id": "B-1",
+        "name": "Kushi Katsu With rice, Tsukemono pickles",
+        "grams": "",
+        "price": "360",
+        "image": "../images/b-1.jpg",
+        "emoji": "🐽🥚🍄🟫🌶🧀",
+        "note": "Panko fried pork, shiitake, onion, jalapeño cheese"
+    },
+    {
+        "id": "B-2",
+        "name": "KARAAGE 5pcs",
+        "grams": "",
+        "price": "300",
+        "image": "../images/b-2.jpg",
+        "emoji": "🐓",
+        "note": null
+    },
+    {
+        "id": "B-3",
+        "name": "Teriyaki Tofu and Veg",
+        "grams": "",
+        "price": "260",
+        "image": "../images/b-3.jpg",
+        "emoji": "🍀",
+        "note": "Gluten free"
+    },
+    {
+        "id": "B-4",
+        "name": "Fried vegetarian GYOZA 5pcs with PONZU",
+        "grams": "",
+        "price": "---",
+        "image": "../images/b-4.jpg",
+        "emoji": null,
+        "note": null
+    },
+    {
+        "id": "S-1",
+        "name": "Miso Soup",
+        "grams": "Tofu & Wakame",
+        "price": "80",
+        "image": "../images/s-1.jpg",
+        "emoji": "🍀",
+        "note": null
+    },
+    {
+        "id": "S-2",
+        "name": "ODEN",
+        "grams": "Japanese fish broth pot-au-feu",
+        "price": "220",
+        "image": "../images/s-2.jpg",
+        "emoji": null,
+        "note": null
+    },
+    {
+        "id": "S-3",
+        "name": "Roast Edamame",
+        "grams": "100g",
+        "price": "100",
+        "image": "../images/hiroki-komiya.png",
+        "emoji": "🍀",
+        "note": null
+    },
+    {
+        "id": "S-4",
+        "name": "Assort of Tsukemono Pickles and Kimchi",
+        "grams": "150g",
+        "price": "150",
+        "image": "../images/s-4.jpg",
+        "emoji": "🍀",
+        "note": null
+    },
+    {
+        "id": "D-1",
+        "name": "Ramune (Japanese soda)",
+        "grams": "",
+        "price": "70",
+        "image": "../images/d-1.jpg",
+        "emoji": null,
+        "note": null
+    }
+]
