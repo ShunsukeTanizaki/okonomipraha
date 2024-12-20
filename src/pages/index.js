@@ -9,15 +9,14 @@ export default function Home() {
     const { t } = useTranslation();
     return (
         <Layout>
-            <div>
-                <div className="top">
+            {/* <div> */}
+            <div className="top">
+                <div className="top__image">
                     <h1>{t('greeting')}</h1>
-                    <StaticImage
-                        alt="猫かわいい！"
-                        src="../images/hiroki-komiya.png"
-                    />
                 </div>
+                <StaticImage alt="" src="../images/hiroki-komiya.png" />
             </div>
+            {/* </div> */}
         </Layout>
     );
 }
