@@ -1,6 +1,14 @@
 @charset 'UTF-8';
 @use './header.scss';
 @use './footer.scss';
+@use './layout.scss';
+
+$bp: 767px;
+@mixin bp {
+    @media screen and (max-width: ($bp)) {
+        @content;
+    }
+}
 
 body {
     background: #f7f3e1;
@@ -8,4 +16,8 @@ body {
 
 li {
     list-style: none;
+}
+
+.text-left {
+    text-align: left;
 }

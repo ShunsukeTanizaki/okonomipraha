@@ -5,11 +5,13 @@ import '../styles/global.scss';
 
 const Layout = ({ children }) => {
     return (
-        <div className="layout">
+        <>
             <Header />
-            <div className="content">{children}</div>
+            <div className="layout">
+                <div className="content">{children}</div>
+            </div>
             <Footer />
-        </div>
+        </>
     );
 };
 
