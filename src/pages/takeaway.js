@@ -7,11 +7,8 @@ import '../styles/takeaway.scss';
 import { useState } from 'react';
 
 export default function Takeaway({ data }) {
-    // console.log(data.allTakeawayJson.nodes);
     const categories = data.allTakeawayJson.nodes; // JSONデータ
-    // const t = data.locales.edges; // 翻訳データ
     const { t } = useTranslation(); // 翻訳データ
-    // console.log(t);
 
     // モーダル表示管理
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,8 +29,7 @@ export default function Takeaway({ data }) {
     return (
         <Layout>
             <div className="takeaway">
-                {/* <h1>Take Away</h1> */}
-                <h1>{t('Delivary MENU (czk)')}</h1>
+                <h1>{t('Delivary MENU')}</h1>
                 <p>12:00-14:00 / 17:00-21:00</p>
                 <div className="takeaway__gallery">
                     {categories.map((category) => (
@@ -47,14 +43,13 @@ export default function Takeaway({ data }) {
                                     >
                                         {console.log(item)}
                                         <img
-                                            src={item.image.publicURL} // publicURLを使って画像を表示
+                                            src={item.image.publicURL}
                                             alt={item.name}
                                             onClick={() => openModal(item)}
                                             className="takeaway__image"
                                         />
                                         <div className="takeaway-info">
                                             <h3>{item.name}</h3>
-                                            {/* <p>{item.grams}</p> */}
                                             <p className="takeaway__price">
                                                 {item.price},- Kč
                                             </p>
@@ -68,14 +63,14 @@ export default function Takeaway({ data }) {
                 {/* モーダル */}
                 {isModalOpen && selectedItem && (
                     <div className="modal">
-                        <div className="modal-content">
-                            <span className="close" onClick={closeModal}>
+                        <div className="modal__content">
+                            <span className="modal__close" onClick={closeModal}>
                                 &times;
                             </span>
                             <img
-                                src={selectedItem.image.publicURL} // こちらもpublicURLを使用
+                                src={selectedItem.image.publicURL}
                                 alt={selectedItem.name}
-                                className="modal-image"
+                                className="takeaway__image"
                             />
                             <h2>{selectedItem.name}</h2>
                             <div className="modal__info">
