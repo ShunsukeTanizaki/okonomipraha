@@ -1,3 +1,5 @@
+@use 'global.scss' as g;
+
 .takeaway {
     text-align: center;
 
@@ -7,8 +9,16 @@
         flex-direction: column;
         gap: 80px;
 
+        @include g.bp {
+            gap: 40px;
+        }
+
         h2 {
             margin-bottom: 20px;
+
+            @include g.bp {
+                margin-bottom: 10px;
+            }
         }
     }
 
@@ -27,6 +37,10 @@
         padding: 10px;
         transition: transform 0.3s ease;
 
+        @include g.bp {
+            width: calc(100% / 2 - 5px);
+        }
+
         &:hover {
             transform: scale(1.05);
         }
@@ -43,7 +57,6 @@
 
     &__price {
         font-weight: bold;
-        // padding-top: 10px;
     }
 
     &__others {
@@ -62,6 +75,10 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
+
+    @include g.bp {
+        padding: 0 10px;
+    }
 
     &__content {
         position: relative;

@@ -52,7 +52,8 @@
     },
     {
         "id": "2",
-        "name": " BENTO take away special  (with rice, Tsukemono pickles,) ",
+        "name": "BENTO",
+        "note": "Take away special (with rice, Tsukemono pickles)",
         "items": [
             {
                 "id": "B-1",

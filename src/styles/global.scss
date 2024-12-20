@@ -3,6 +3,13 @@
 @use './footer.scss';
 @use './layout.scss';
 
+$bp: 767px;
+@mixin bp {
+    @media screen and (max-width: ($bp)) {
+        @content;
+    }
+}
+
 body {
     background: #f7f3e1;
 }

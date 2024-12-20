@@ -34,14 +34,14 @@ export default function Takeaway({ data }) {
                 <div className="takeaway__gallery">
                     {categories.map((category) => (
                         <div key={category.id}>
-                            <h2>--- {category.name} ---</h2>
+                            <h2>--- {t(category.name)} ---</h2>
+                            <span className="text-left">{category.note}</span>
                             <div className="takeaway__category">
                                 {category.items.map((item) => (
                                     <div
                                         key={item.id}
                                         className="takeaway__item"
                                     >
-                                        {console.log(item)}
                                         <img
                                             src={item.image.publicURL}
                                             alt={item.name}
@@ -49,7 +49,7 @@ export default function Takeaway({ data }) {
                                             className="takeaway__image"
                                         />
                                         <div className="takeaway-info">
-                                            <h3>{item.name}</h3>
+                                            <h3>{t(item.name)}</h3>
                                             <p className="takeaway__price">
                                                 {item.price},- Kč
                                             </p>
@@ -72,7 +72,7 @@ export default function Takeaway({ data }) {
                                 alt={selectedItem.name}
                                 className="takeaway__image"
                             />
-                            <h2>{selectedItem.name}</h2>
+                            <h2>{t(selectedItem.name)}</h2>
                             <div className="modal__info">
                                 <p className="takeaway__price">
                                     {selectedItem.price},- Kč
@@ -127,6 +127,7 @@ export const query = graphql`
             nodes {
                 id
                 name
+                note
                 items {
                     id
                     name
