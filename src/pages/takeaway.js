@@ -146,7 +146,7 @@ export const query = graphql`
 
 export const Head = () => (
     <>
-        <title>Take away|祭：お好み焼き居酒屋 プラハ</title>
+        <title>Take away|Izakaya</title>
         <meta
             name="description"
             content="Takeaway menu for祭：お好み焼き居酒屋 プラハ"
