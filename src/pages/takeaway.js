@@ -7,11 +7,11 @@ import '../styles/takeaway.scss';
 import { useState } from 'react';
 
 export default function Takeaway({ data }) {
-    console.log(data);
-    const items = data.allTakeawayJson.nodes; // JSONデータ
+    // console.log(data.allTakeawayJson.nodes);
+    const categories = data.allTakeawayJson.nodes; // JSONデータ
     // const t = data.locales.edges; // 翻訳データ
     const { t } = useTranslation(); // 翻訳データ
-    console.log(t);
+    // console.log(t);
 
     // モーダル表示管理
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -33,31 +33,38 @@ export default function Takeaway({ data }) {
         <Layout>
             <div className="takeaway">
                 {/* <h1>Take Away</h1> */}
-                <h1>{t('Takeaway')}</h1>
+                <h1>{t('Delivary MENU (czk)')}</h1>
+                <p>12:00-14:00 / 17:00-21:00</p>
                 <div className="takeaway__gallery">
-                    {items.map((item) => (
-                        <div key={item.id} className="takeaway__item">
-                            {/* 画像表示部分 */}
-                            <img
-                                src={item.image.publicURL} // publicURLを使って画像を表示
-                                alt={item.name}
-                                onClick={() => openModal(item)}
-                                className="takeaway__image"
-                            />
-                            <div className="takeaway-info">
-                                <h3>{t(item.name)}</h3>
-                                <p>
-                                    {item.emoji} {item.note}
-                                </p>
-                                <p>{item.grams}</p>
-                                <p className="takeaway__price">
-                                    {item.price} -
-                                </p>
+                    {categories.map((category) => (
+                        <div key={category.id}>
+                            <h2>--- {category.name} ---</h2>
+                            <div className="takeaway__category">
+                                {category.items.map((item) => (
+                                    <div
+                                        key={item.id}
+                                        className="takeaway__item"
+                                    >
+                                        {console.log(item)}
+                                        <img
+                                            src={item.image.publicURL} // publicURLを使って画像を表示
+                                            alt={item.name}
+                                            onClick={() => openModal(item)}
+                                            className="takeaway__image"
+                                        />
+                                        <div className="takeaway-info">
+                                            <h3>{item.name}</h3>
+                                            {/* <p>{item.grams}</p> */}
+                                            <p className="takeaway__price">
+                                                {item.price},- Kč
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     ))}
                 </div>
-
                 {/* モーダル */}
                 {isModalOpen && selectedItem && (
                     <div className="modal">
@@ -71,16 +78,40 @@ export default function Takeaway({ data }) {
                                 className="modal-image"
                             />
                             <h2>{selectedItem.name}</h2>
-                            <p>
-                                {selectedItem.emoji} {selectedItem.note}
-                            </p>
-                            <p>{selectedItem.grams}</p>
-                            <p className="takeaway__price">
-                                {selectedItem.price} -
-                            </p>
+                            <div className="modal__info">
+                                <p className="takeaway__price">
+                                    {selectedItem.price},- Kč
+                                </p>
+                                <p>{selectedItem.grams}</p>
+                                <p className="text-left">
+                                    {t(selectedItem.note)}
+                                </p>
+                                <p className="text-left">
+                                    {t('Allergy: ')}
+                                    {selectedItem.allergy}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 )}
+
+                <div className="takeaway__others">
+                    <h3>“Informane o alergenech Vám poskytne obsluha” </h3>
+                    <p>One Take away package 20,- </p>
+                    <h3>Set for 2 people</h3>
+                    <h4>O2-1 Top hits set 750,-</h4>
+                    <p>○KARAAGE ○Gyoza ○Japanese ice ○Okonomiyaki Pork</p>
+                    <h4>O2-2 Vegan set 750,-</h4>
+                    <p>
+                        ○Tsukemono ○Gyoza ○Wakame ○Tofu Teriyaki ○Japanese rice
+                        x 2
+                    </p>
+                    <h4>O2-3 Osaka set 780,-</h4>
+                    <p>
+                        ○Takoyaki ○Kushi Katsu ○Okonomiyaki Chicken Egg
+                        ○Japanese rice
+                    </p>
+                </div>
             </div>
         </Layout>
     );
@@ -101,13 +132,17 @@ export const query = graphql`
             nodes {
                 id
                 name
-                grams
-                price
-                image {
-                    publicURL
+                items {
+                    id
+                    name
+                    grams
+                    price
+                    image {
+                        publicURL
+                    }
+                    allergy
+                    note
                 }
-                emoji
-                note
             }
         }
     }
