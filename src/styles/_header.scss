@@ -1,17 +1,31 @@
 .header {
-    background: gainsboro;
+    background-color: dimgrey;
+    padding: 10px;
+
     &__links {
-        @media screen and (min-width: (767px)) {
-            display: flex;
-        }
-        a {
-            margin: 0 20px;
+        margin: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &--home {
+            font-size: 36px;
+            color: #fff;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
         }
         &--languages {
             display: flex;
-            margin: 0;
+            margin: 0 20px;
             padding: 0;
             list-style: none;
+            li {
+                padding: 0 8px;
+                // margin-right: 8px;
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
         }
     }
 }
