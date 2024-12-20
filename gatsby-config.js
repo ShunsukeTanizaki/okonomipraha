@@ -19,9 +19,15 @@ module.exports = {
         {
             resolve: `gatsby-plugin-react-i18next`,
             options: {
-                localeJsonSourceName: `locale`,
-                languages: [`cs`, `en`, `ja`],
+                localeJsonSourceName: `locale`, // localesディレクトリ
+                languages: [`cs`, `en`, `ja`], // サポートする言語
                 defaultLanguage: `ja`, // TODO: 最後にcsに変更
+                siteUrl: `https://www.okonomipraha.cz/`,
+                i18nextOptions: {
+                    interpolation: {
+                        escapeValue: false, // Reactはエスケープを自動処理
+                    },
+                },
             },
         },
         `gatsby-plugin-sass`,

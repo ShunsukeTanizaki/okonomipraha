@@ -2,12 +2,16 @@ import * as React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import '../styles/takeaway.scss';
 import { useState } from 'react';
 
 export default function Takeaway({ data }) {
+    console.log(data);
     const items = data.allTakeawayJson.nodes; // JSONデータ
-    const translations = data.locales.edges; // 翻訳データ
+    // const t = data.locales.edges; // 翻訳データ
+    const { t } = useTranslation(); // 翻訳データ
+    console.log(t);
 
     // モーダル表示管理
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,22 +31,28 @@ export default function Takeaway({ data }) {
 
     return (
         <Layout>
-            <div className="takeaway-container">
-                <h1>Take Away</h1>
-                <div className="takeaway-gallery">
+            <div className="takeaway">
+                {/* <h1>Take Away</h1> */}
+                <h1>{t('Takeaway')}</h1>
+                <div className="takeaway__gallery">
                     {items.map((item) => (
-                        <div key={item.id} className="takeaway-item">
+                        <div key={item.id} className="takeaway__item">
                             {/* 画像表示部分 */}
                             <img
                                 src={item.image.publicURL} // publicURLを使って画像を表示
                                 alt={item.name}
                                 onClick={() => openModal(item)}
-                                className="takeaway-image"
+                                className="takeaway__image"
                             />
                             <div className="takeaway-info">
-                                <h3>{item.name}</h3>
+                                <h3>{t(item.name)}</h3>
+                                <p>
+                                    {item.emoji} {item.note}
+                                </p>
                                 <p>{item.grams}</p>
-                                <p>{item.price} -</p>
+                                <p className="takeaway__price">
+                                    {item.price} -
+                                </p>
                             </div>
                         </div>
                     ))}
@@ -55,14 +65,19 @@ export default function Takeaway({ data }) {
                             <span className="close" onClick={closeModal}>
                                 &times;
                             </span>
-                            <h2>{selectedItem.name}</h2>
                             <img
                                 src={selectedItem.image.publicURL} // こちらもpublicURLを使用
                                 alt={selectedItem.name}
                                 className="modal-image"
                             />
+                            <h2>{selectedItem.name}</h2>
+                            <p>
+                                {selectedItem.emoji} {selectedItem.note}
+                            </p>
                             <p>{selectedItem.grams}</p>
-                            <p>{selectedItem.price}</p>
+                            <p className="takeaway__price">
+                                {selectedItem.price} -
+                            </p>
                         </div>
                     </div>
                 )}
@@ -91,6 +106,8 @@ export const query = graphql`
                 image {
                     publicURL
                 }
+                emoji
+                note
             }
         }
     }

@@ -1,33 +1,46 @@
-.takeaway-container {
-    padding: 20px;
-    text-align: center;
-}
-
-.takeaway-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.takeaway-item {
-    cursor: pointer;
-    border: 1px solid #ddd;
+.takeaway {
     padding: 10px;
-    transition: transform 0.3s ease;
+    text-align: center;
+
+    &__gallery {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        gap: 10px;
+    }
+
+    &__item {
+        background-color: #fff;
+        cursor: pointer;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 10px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    &__image {
+        width: 100%;
+        height: auto;
+        // border-radius: 4px;
+    }
+    &__price {
+        font-weight: bold;
+    }
 }
 
-.takeaway-item:hover {
-    transform: scale(1.05);
-}
-
-.takeaway-image {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+.modal-code {
+    display: flex;
 }
 
 .takeaway-info {
     margin-top: 10px;
+}
+
+.takeaway-price {
+    font-weight: bold;
 }
 
 .modal {
@@ -44,8 +57,10 @@
 }
 
 .modal-content {
+    position: relative;
     background: white;
     padding: 20px;
+    border: 1px solid #ddd; //
     border-radius: 8px;
     text-align: center;
     max-width: 500px;
@@ -54,14 +69,20 @@
 
 .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0px;
+    right: 20px;
     font-size: 30px;
     cursor: pointer;
+}
+
+.modal-name {
+    span {
+        font-weight: normal;
+    }
 }
 
 .modal-image {
     width: 100%;
     height: auto;
-    margin-top: 20px;
+    margin-top: 30px;
 }
