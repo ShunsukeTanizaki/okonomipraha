@@ -2,9 +2,11 @@
 
 .takeaway {
     text-align: center;
+    padding: 10px;
 
     &__gallery {
         margin-top: 50px;
+
         display: flex;
         flex-direction: column;
         gap: 80px;
@@ -60,7 +62,7 @@
     }
 
     &__others {
-        margin: 60px 0;
+        margin: 60px 0 0;
     }
 }
 

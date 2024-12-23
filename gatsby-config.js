@@ -47,6 +47,6 @@ module.exports = {
                 path: `${__dirname}/src/data/`,
             },
         },
-        `gatsby-transformer-json`, // JSONファイルの変換
+        `gatsby-transformer-json`,
     ],
 };

@@ -1,0 +1,14 @@
+.top {
+    text-align: center;
+    &__image {
+        height: 500px;
+        padding: 30px;
+        background-color: cadetblue;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1 {
+            color: #fff;
+        }
+    }
+}
