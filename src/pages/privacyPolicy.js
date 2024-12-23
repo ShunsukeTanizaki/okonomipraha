@@ -2,26 +2,18 @@ import * as React from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import Layout from '../components/Layout';
-import { StaticImage } from 'gatsby-plugin-image';
-import '../styles/top.scss';
+// import { StaticImage } from 'gatsby-plugin-image';
 
-const Top = () => {
+const privacyPolicy = () => {
     const { t } = useTranslation();
     return (
         <Layout>
-            {/* <div> */}
-            <div className="top">
-                <div className="top__image">
-                    <h1>{t('greeting')}</h1>
-                </div>
-                <StaticImage alt="" src="../images/hiroki-komiya.png" />
-            </div>
-            {/* </div> */}
+            <h1>{t('Privacy Policy')}</h1>
         </Layout>
     );
 };
 
-export default Top;
+export default privacyPolicy;
 
 export const query = graphql`
     query ($language: String!) {
@@ -38,7 +30,7 @@ export const query = graphql`
 `;
 export const Head = () => (
     <>
-        <title>Izakaya</title>
+        <title>Privacy Policy|Izakaya</title>
         <meta name="description" content="This is the homepage…" />
         {/* <!-- reset.css ress --> */}
         <link
