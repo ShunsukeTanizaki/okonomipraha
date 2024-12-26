@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
-import { StaticImage } from 'gatsby-plugin-image';
+// import { StaticImage } from 'gatsby-plugin-image';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import '../styles/takeaway.scss';
 import { useState } from 'react';
+// import '../styles/takeaway.scss';
 
-export default function Takeaway({ data }) {
+const Takeaway = ({ data }) => {
     const categories = data.allTakeawayJson.nodes; // JSONデータ
     const { t } = useTranslation(); // 翻訳データ
 
@@ -28,14 +28,37 @@ export default function Takeaway({ data }) {
 
     return (
         <Layout>
+            <div className="top">
+                <div className="top__kv">
+                    <div className="top__kv--image">
+                        <h1 className="top__kv--text">
+                            {t('IZAKAYA')} <br />
+                            {t('Veletržní 73')}
+                        </h1>
+                    </div>
+                    <div className="top__kv--line"></div>
+                </div>
+            </div>
+
             <div className="takeaway">
-                <h1>{t('Delivary MENU')}</h1>
-                <p>12:00-14:00 / 17:00-21:00</p>
+                <div className="takeaway__info">
+                    <h1>{t('Delivery MENU')}</h1>
+                    <p>{t('One Take away package 20,-')}</p>
+                    <h3 className="takeaway__info--open">
+                        {t('12:00-14:00 / 17:00-21:00')}
+                    </h3>
+                    <h4 className="takeaway__info--allergy">
+                        {t('“Informane o alergenech Vám poskytne obsluha”')}
+                    </h4>
+                </div>
+
                 <div className="takeaway__gallery">
                     {categories.map((category) => (
                         <div key={category.id}>
-                            <h2>--- {t(category.name)} ---</h2>
-                            <span className="text-left">{category.note}</span>
+                            <h2 className="menu-category">
+                                {t(category.name)}
+                            </h2>
+                            <p>{category.note}</p>
                             <div className="takeaway__category">
                                 {category.items.map((item) => (
                                     <div
@@ -63,14 +86,14 @@ export default function Takeaway({ data }) {
                 {/* モーダル */}
                 {isModalOpen && selectedItem && (
                     <div className="modal">
-                        <div className="modal__content">
+                        <div className="modal__item">
                             <span className="modal__close" onClick={closeModal}>
                                 &times;
                             </span>
                             <img
                                 src={selectedItem.image.publicURL}
                                 alt={selectedItem.name}
-                                className="takeaway__image"
+                                className="takeaway__image modal__item--image"
                             />
                             <h2>{t(selectedItem.name)}</h2>
                             <div className="modal__info">
@@ -78,10 +101,9 @@ export default function Takeaway({ data }) {
                                     {selectedItem.price},- Kč
                                 </p>
                                 <p>{selectedItem.grams}</p>
-                                <p className="text-left">
-                                    {t(selectedItem.note)}
-                                </p>
-                                <p className="text-left">
+
+                                <p>{t(selectedItem.note)}</p>
+                                <p>
                                     {t('Allergy: ')}
                                     {selectedItem.allergy}
                                 </p>
@@ -91,26 +113,37 @@ export default function Takeaway({ data }) {
                 )}
 
                 <div className="takeaway__others">
-                    <h3>“Informane o alergenech Vám poskytne obsluha” </h3>
-                    <p>One Take away package 20,- </p>
-                    <h3>Set for 2 people</h3>
+                    <h2 className="menu-category">{t('Recommendation')}</h2>
+                    <h3>Share for 2</h3>
                     <h4>O2-1 Top hits set 750,-</h4>
-                    <p>○KARAAGE ○Gyoza ○Japanese ice ○Okonomiyaki Pork</p>
+                    <p>
+                        <span>○KARAAGE</span>
+                        <span>○Gyoza</span>
+                        <span>○Japanese ice</span>
+                        <span>○Okonomiyaki Pork</span>
+                    </p>
                     <h4>O2-2 Vegan set 750,-</h4>
                     <p>
-                        ○Tsukemono ○Gyoza ○Wakame ○Tofu Teriyaki ○Japanese rice
-                        x 2
+                        <span>○Tsukemono</span>
+                        <span>○Gyoza</span>
+                        <span>○Wakame</span>
+                        <span>○Tofu Teriyaki</span>
+                        <span>○Japanese rice x 2</span>
                     </p>
                     <h4>O2-3 Osaka set 780,-</h4>
                     <p>
-                        ○Takoyaki ○Kushi Katsu ○Okonomiyaki Chicken Egg
-                        ○Japanese rice
+                        <span>○Takoyaki</span>
+                        <span>○Kushi Katsu</span>
+                        <span>○Okonomiyaki Chicken Egg</span>
+                        <span>○Japanese rice</span>
                     </p>
                 </div>
             </div>
         </Layout>
     );
-}
+};
+
+export default Takeaway;
 
 export const query = graphql`
     query ($language: String!) {
@@ -146,11 +179,8 @@ export const query = graphql`
 
 export const Head = () => (
     <>
-        <title>Take away|Izakaya</title>
-        <meta
-            name="description"
-            content="Takeaway menu for祭：お好み焼き居酒屋 プラハ"
-        />
+        <title>IZAKAYA</title>
+        <meta name="description" content="Veletržní 73  Izakaya Homepage" />
         <link
             rel="stylesheet"
             href="https://unpkg.com/ress/dist/ress.min.css"

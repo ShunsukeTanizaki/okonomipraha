@@ -21,7 +21,7 @@ module.exports = {
             options: {
                 localeJsonSourceName: `locale`, // localesディレクトリ
                 languages: [`cs`, `en`, `ja`], // サポートする言語
-                defaultLanguage: `ja`, // TODO: 最後にcsに変更
+                defaultLanguage: `cs`,
                 siteUrl: `https://www.okonomipraha.cz/`,
                 i18nextOptions: {
                     interpolation: {

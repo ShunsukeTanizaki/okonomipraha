@@ -6,7 +6,11 @@ $bp: 767px;
 }
 
 body {
-    background: #f7f3e1;
+    background-position: 100% 100%;
+    background-repeat: repeat;
+    background-image: url('../images/bg-image.jpg');
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
 }
 
 li {
@@ -15,4 +19,27 @@ li {
 
 .text-left {
     text-align: left;
+}
+
+.menu-category {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before,
+    &::after {
+        content: '';
+        height: 2px;
+        flex-grow: 0.2;
+        background-color: #000;
+    }
+
+    &::before {
+        margin-right: 1rem;
+    }
+
+    &::after {
+        margin-left: 1rem;
+    }
 }

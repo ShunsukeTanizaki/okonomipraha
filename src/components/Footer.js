@@ -7,6 +7,7 @@ const Footer = () => {
     const { t } = useTranslation();
     return (
         <footer className="footer">
+            <div className="footer--line"></div>
             <div className="footer__wrap">
                 <div className="footer__inner">
                     <div className="footer__block">
@@ -47,23 +48,23 @@ const Footer = () => {
                     <div className="footer__block">
                         <h3>{t('Address')}</h3>
                         <address className="footer__block--text">
-                            Veletržní 820/73
+                            {t('Veletržní 820/73')}
                             <br />
-                            170 00 Praha 7
+                            {t('170 00 Prague 7')}
                         </address>
                         <div className="footer__map">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.312531171503!2d14.423827527185065!3d50.09948032147384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b95ac926732d3%3A0x7967a05c77319a74!2s%22MATSURI%22%20OKONOMIYAKI%20%26%20IZAKAYA!5e0!3m2!1sja!2sjp!4v1734949535075!5m2!1sja!2sjp"
-                                allowfullscreen=""
+                                allowFullScreen=""
                                 loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
+                                referrerPolicy="no-referrer-when-downgrade"
                             ></iframe>
                         </div>
                         <a
                             href="https://maps.app.goo.gl/DqBJrs6ehK3W5M1HA"
                             target="blank"
                         >
-                            Open in Google Maps
+                            {t('Open in Google Maps')}
                         </a>
                     </div>
                 </div>
@@ -72,14 +73,15 @@ const Footer = () => {
                     <div className="footer__block">
                         <h3>{t('Invoicing details')}</h3>
                         <p className="footer__block--text">
-                            Happy Hedge Hog Habour House s.r.o.
+                            {t('Happy Hedge Hog Habour House s.r.o.')}
                             <br />
-                            Rybná 716/24
+                            {t('Rybná 716/24')}
                             <br />
-                            110 00 Praha 1
+                            {t('110 00 Prague 1')}
                             <br />
-                            <br />
-                            {t('Business ID (IČ): 21474991')}
+                            <span className="footer__block--business-id">
+                                {t('Business ID (IČ): 21474991')}
+                            </span>
                         </p>
                     </div>
 
@@ -91,7 +93,7 @@ const Footer = () => {
                                 {/* <Link to="/">{t('Cookie Settings')}</Link> */}
                             </li>
                             <li>
-                                <Link to="/privacyPolicy">
+                                <Link to="/privacy-policy">
                                     {t('Privacy Policy')}
                                 </Link>
                             </li>
@@ -99,8 +101,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="copylight">
-                <p>© 2024, IZAKAYA</p>
+            <div className="copy-light">
+                <p>© 2024 IZAKAYA</p>
             </div>
         </footer>
     );

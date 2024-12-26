@@ -30,8 +30,11 @@ export const query = graphql`
 `;
 export const Head = () => (
     <>
-        <title>Privacy Policy|Izakaya</title>
-        <meta name="description" content="This is the homepage…" />
+        <title>Privacy Policy | Izakaya</title>
+        <meta
+            name="description"
+            content="Privacy-policy and Official information"
+        />
         {/* <!-- reset.css ress --> */}
         <link
             rel="stylesheet"
