@@ -2,7 +2,7 @@
 
 .takeaway {
     text-align: center;
-    padding: 10px;
+    // padding: 10px;
 
     &__info {
         &--open {
@@ -92,7 +92,7 @@
     z-index: 1000;
 
     @include g.bp {
-        padding: 0 10px;
+        padding: 0 20px;
     }
 
     &__item {
@@ -102,6 +102,10 @@
         border: 1px solid #ddd;
         border-radius: 8px;
         max-width: 500px;
+
+        @include g.bp {
+            margin: 20px 0;
+        }
 
         &--image {
             max-height: 450px;

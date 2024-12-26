@@ -30,5 +30,22 @@
     "Business ID (IČ): 21474991": "会社登録番号 (IČ): 21474991",
     "Important documents": "重要事項",
     "Cookie Settings": "Cookieの設定",
-    "Privacy Policy": "プライバシーポリシー"
+
+    "Privacy Policy": "プライバシーポリシー",
+    "Our restaurant is committed to protecting the privacy of our customers in the Czech Republic. This policy explains how we collect, use, store, and share your personal information.": "当レストランは、チェコ国内のお客様に対して個人情報の保護を重視しています。本ポリシーは、収集した情報の利用目的、保存方法、および第三者への共有について説明します。",
+    "Information We Collect": "収集する情報",
+    "Name": "名前",
+    "Email address": "メールアドレス",
+    "Phone number": "電話番号",
+    "Reservation details": "予約情報",
+    "Cookies": "Cookie について",
+    "Our website uses cookies to enhance user experience. This includes traffic analysis through Google Analytics and Facebook Pixel.": "ウェブサイトでは、ユーザー体験を向上させるためにクッキーを使用しています。これには、Google AnalyticsやFacebook Pixelによるトラフィック分析が含まれます。",
+    "Third-Party Services": "第三者サービス",
+    "We use the following third-party services:": "以下の第三者サービスを利用します:",
+    "Google Analytics: Traffic analysis of site visitors": "Google Analytics: サイト訪問者のトラフィック解析",
+    "Facebook Pixel: Marketing purposes": "Facebook Pixel: マーケティング目的",
+    "Contact": "連絡先",
+    "For inquiries, please contact us at:": "お問い合わせは以下までご連絡ください:",
+    "Email: info@okonomipraha.cz": "Email: info@okonomipraha.cz",
+    "Address: Rybná 716/24 110 00 Praha 2": "住所: Rybná 716/24 110 00 Praha 2"
 }
