@@ -1,8 +1,35 @@
 @use 'global.scss' as g;
 
+.menu-category {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before,
+    &::after {
+        content: '';
+        height: 2px;
+        flex-grow: 0.2;
+        background-color: #000;
+    }
+
+    &::before {
+        margin-right: 1rem;
+    }
+
+    &::after {
+        margin-left: 1rem;
+    }
+}
+
 .takeaway {
     text-align: center;
     padding: 10px;
+
+    h2 {
+        margin-bottom: 12px;
+    }
 
     &__gallery {
         margin-top: 50px;
@@ -14,20 +41,13 @@
         @include g.bp {
             gap: 40px;
         }
-
-        h2 {
-            margin-bottom: 20px;
-
-            @include g.bp {
-                margin-bottom: 10px;
-            }
-        }
     }
 
     &__category {
         display: flex;
         flex-wrap: wrap;
         gap: 20px 10px;
+        margin-top: 20px;
     }
 
     &__item {
@@ -62,7 +82,15 @@
     }
 
     &__others {
-        margin: 60px 0 0;
+        margin: 80px 0 50px;
+
+        h4 {
+            margin: 12px 0;
+        }
+
+        span {
+            padding-right: 12px;
+        }
     }
 }
 
@@ -82,14 +110,18 @@
         padding: 0 10px;
     }
 
-    &__content {
+    &__item {
         position: relative;
         background: white;
         padding: 50px 20px 20px;
-        border: 1px solid #ddd; //
+        border: 1px solid #ddd;
         border-radius: 8px;
         max-width: 500px;
-        width: 100%;
+        // width: 100%;
+
+        &--image {
+            max-height: 450px;
+        }
     }
 
     &__close {

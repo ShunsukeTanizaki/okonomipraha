@@ -20,7 +20,7 @@ export default NotFound;
 
 export const Head = () => (
     <>
-        <title>404|Izakaya</title>
+        <title>404 | Izakaya</title>
         <meta name="description" content="Page not found…" />
         <link
             rel="stylesheet"

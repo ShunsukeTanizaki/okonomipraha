@@ -12,13 +12,11 @@
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 0 20px;
-        @include g.bp {
-            padding: 40px 20px 12px;
-        }
 
         @include g.bp {
             flex-direction: column;
             align-items: flex-start;
+            padding: 40px 20px 12px;
         }
     }
 
@@ -33,8 +31,13 @@
     &__block {
         margin-bottom: 40px;
 
+        @include g.bp {
+            margin-bottom: 28px;
+        }
+
         h3 {
             padding-bottom: 20px;
+
             @include g.bp {
                 padding-bottom: 12px;
             }
@@ -56,10 +59,16 @@
         &--text {
             line-height: 2;
         }
+
+        &--business-id {
+            padding-top: 16px;
+            display: inline-block;
+        }
     }
 
     &__map {
         margin: 20px 0;
+
         iframe {
             border: none;
             margin: 0px;
@@ -70,7 +79,7 @@
         }
     }
 
-    .copylight {
+    .copy-light {
         background-color: #ac116c91;
         text-align: center;
 

@@ -5,23 +5,28 @@ import Layout from '../components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 import '../styles/top.scss';
 
-const Top = () => {
+const Home = () => {
     const { t } = useTranslation();
+
     return (
         <Layout>
-            {/* <div> */}
             <div className="top">
-                <div className="top__image">
-                    <h1>{t('greeting')}</h1>
+                <div className="top__kv">
+                    <div className="top__kv--image">
+                        <h1>
+                            {t(
+                                'Original space for parties and celebrations with Japanese street food in the form of catering'
+                            )}
+                        </h1>
+                    </div>
                 </div>
                 <StaticImage alt="" src="../images/hiroki-komiya.png" />
             </div>
-            {/* </div> */}
         </Layout>
     );
 };
 
-export default Top;
+export default Home;
 
 export const query = graphql`
     query ($language: String!) {
@@ -36,10 +41,11 @@ export const query = graphql`
         }
     }
 `;
+
 export const Head = () => (
     <>
         <title>Izakaya</title>
-        <meta name="description" content="This is the homepage…" />
+        <meta name="description" content="Veletržní 73  Izakaya Homepage" />
         {/* <!-- reset.css ress --> */}
         <link
             rel="stylesheet"
