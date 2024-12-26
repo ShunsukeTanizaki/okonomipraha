@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
-import { StaticImage } from 'gatsby-plugin-image';
+// import { StaticImage } from 'gatsby-plugin-image';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { useState } from 'react';
-import '../styles/takeaway.scss';
+// import '../styles/takeaway.scss';
 
 const Takeaway = ({ data }) => {
     const categories = data.allTakeawayJson.nodes; // JSONデータ
@@ -32,19 +32,26 @@ const Takeaway = ({ data }) => {
                 <div className="top__kv">
                     <div className="top__kv--image">
                         <h1 className="top__kv--text">
-                            {t(
-                                'Original space for parties and celebrations with Japanese street food in the form of catering'
-                            )}
+                            {t('IZAKAYA')} <br />
+                            {t('Veletržní 73')}
                         </h1>
                     </div>
+                    <div className="top__kv--line"></div>
                 </div>
-                <StaticImage alt="" src="../images/hiroki-komiya.png" />
             </div>
 
             <div className="takeaway">
-                <h1>{t('Delivary MENU')}</h1>
-                <p>{t('12:00-14:00 / 17:00-21:00')}</p>
-                <h3>{t('“Informane o alergenech Vám poskytne obsluha”')}</h3>
+                <div className="takeaway__info">
+                    <h1>{t('Delivery MENU')}</h1>
+                    <p>{t('One Take away package 20,-')}</p>
+                    <h3 className="takeaway__info--open">
+                        {t('12:00-14:00 / 17:00-21:00')}
+                    </h3>
+                    <h4 className="takeaway__info--allergy">
+                        {t('“Informane o alergenech Vám poskytne obsluha”')}
+                    </h4>
+                </div>
+
                 <div className="takeaway__gallery">
                     {categories.map((category) => (
                         <div key={category.id}>
@@ -94,10 +101,9 @@ const Takeaway = ({ data }) => {
                                     {selectedItem.price},- Kč
                                 </p>
                                 <p>{selectedItem.grams}</p>
-                                <p className="text-left">
-                                    {t(selectedItem.note)}
-                                </p>
-                                <p className="text-left">
+
+                                <p>{t(selectedItem.note)}</p>
+                                <p>
                                     {t('Allergy: ')}
                                     {selectedItem.allergy}
                                 </p>
@@ -108,9 +114,7 @@ const Takeaway = ({ data }) => {
 
                 <div className="takeaway__others">
                     <h2 className="menu-category">{t('Recommendation')}</h2>
-                    {/* <h3>“Informane o alergenech Vám poskytne obsluha” </h3> */}
-                    <p>One Take away package 20,- </p>
-                    <h3>Set for 2 people</h3>
+                    <h3>Share for 2</h3>
                     <h4>O2-1 Top hits set 750,-</h4>
                     <p>
                         <span>○KARAAGE</span>
@@ -175,11 +179,8 @@ export const query = graphql`
 
 export const Head = () => (
     <>
-        <title>Take away & Bento | Izakaya</title>
-        <meta
-            name="description"
-            content="Takeaway special Bento and Okonomiyaki"
-        />
+        <title>IZAKAYA</title>
+        <meta name="description" content="Veletržní 73  Izakaya Homepage" />
         <link
             rel="stylesheet"
             href="https://unpkg.com/ress/dist/ress.min.css"

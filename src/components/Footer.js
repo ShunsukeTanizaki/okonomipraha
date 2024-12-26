@@ -7,6 +7,7 @@ const Footer = () => {
     const { t } = useTranslation();
     return (
         <footer className="footer">
+            <div className="footer--line"></div>
             <div className="footer__wrap">
                 <div className="footer__inner">
                     <div className="footer__block">
@@ -92,7 +93,7 @@ const Footer = () => {
                                 {/* <Link to="/">{t('Cookie Settings')}</Link> */}
                             </li>
                             <li>
-                                <Link to="/privacyPolicy">
+                                <Link to="/privacy-policy">
                                     {t('Privacy Policy')}
                                 </Link>
                             </li>
@@ -101,7 +102,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="copy-light">
-                <p>© 2024, IZAKAYA</p>
+                <p>© 2024 IZAKAYA</p>
             </div>
         </footer>
     );

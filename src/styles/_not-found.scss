@@ -1,0 +1,16 @@
+@use 'global.scss' as g;
+
+.not-found {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        text-align: center;
+
+        h1 {
+            margin-bottom: 30px;
+        }
+    }
+}

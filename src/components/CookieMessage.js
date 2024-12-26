@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { CookieNotice } from 'gatsby-cookie-notice';
-import '../styles/cookieMessage.scss';
+// import '../styles/cookieMessage.scss';
 
 const Cookie = () => {
     const [isPopUpVisible, setPopUpVisible] = useState(false);

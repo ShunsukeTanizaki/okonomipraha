@@ -6,6 +6,15 @@
     background-color: deeppink;
     color: #fff;
 
+    &--line {
+        background-color: #fff;
+        background-size: contain;
+        height: 50px;
+        background-position: 100% 100%;
+        background-repeat: repeat-x;
+        background-image: url('../images/kohaku.png');
+    }
+
     &__wrap {
         padding: 76px 32px 32px;
         display: flex;

@@ -1,4 +1,12 @@
 @charset 'UTF-8';
+
+// Pages
+@use './_top.scss';
+@use './_takeaway.scss';
+@use './_not-found.scss';
+@use './_cookieMessage.scss';
+
+// Components
 @use './header.scss';
 @use './footer.scss';
 @use './layout.scss';

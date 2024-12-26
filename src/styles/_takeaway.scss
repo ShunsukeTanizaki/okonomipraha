@@ -1,34 +1,18 @@
 @use 'global.scss' as g;
 
-.menu-category {
-    margin-bottom: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &::before,
-    &::after {
-        content: '';
-        height: 2px;
-        flex-grow: 0.2;
-        background-color: #000;
-    }
-
-    &::before {
-        margin-right: 1rem;
-    }
-
-    &::after {
-        margin-left: 1rem;
-    }
-}
-
 .takeaway {
     text-align: center;
     padding: 10px;
 
-    h2 {
-        margin-bottom: 12px;
+    &__info {
+        &--open {
+            font-size: 24px;
+            margin-top: 24px;
+        }
+
+        &--allergy {
+            margin-top: 20px;
+        }
     }
 
     &__gallery {
@@ -71,6 +55,7 @@
     &__image {
         width: 100%;
         height: auto;
+        margin-bottom: 8px;
     }
 
     &__info {
@@ -113,11 +98,10 @@
     &__item {
         position: relative;
         background: white;
-        padding: 50px 20px 20px;
+        padding: 50px 12px 16px;
         border: 1px solid #ddd;
         border-radius: 8px;
         max-width: 500px;
-        // width: 100%;
 
         &--image {
             max-height: 450px;
