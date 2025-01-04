@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
+import AllergyInfoWithModal from '../components/AllergyInfo';
 // import { StaticImage } from 'gatsby-plugin-image';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { useState } from 'react';
@@ -35,12 +36,14 @@ const Top = ({ data }) => {
     const openModal = (item) => {
         setSelectedItem(item);
         setIsModalOpen(true);
+        document.body.classList.add('modal-open');
     };
 
     // モーダルを閉じる関数
     const closeModal = () => {
         setIsModalOpen(false);
         setSelectedItem(null);
+        document.body.classList.remove('modal-open');
     };
 
     return (
@@ -64,9 +67,7 @@ const Top = ({ data }) => {
                     <h3 className="takeaway__info--open">
                         {t('12:00-14:00 / 17:00-21:00')}
                     </h3>
-                    <h4 className="takeaway__info--allergy">
-                        {t('“Informane o alergenech Vám poskytne obsluha”')}
-                    </h4>
+                    <AllergyInfoWithModal />
                 </div>
 
                 <div className="takeaway__gallery">
@@ -75,22 +76,24 @@ const Top = ({ data }) => {
                             <h2 className="menu-category">
                                 {t(category.name)}
                             </h2>
-                            <p>{category.note}</p>
+                            <p className="takeaway__gallery--note">
+                                {category.note}
+                            </p>
                             <div className="takeaway__category">
                                 {category.items.map((item) => (
                                     <div
                                         key={item.id}
                                         className="takeaway__item"
+                                        onClick={() => openModal(item)}
                                     >
                                         <img
                                             src={item.image.publicURL}
                                             alt={item.name}
-                                            onClick={() => openModal(item)}
-                                            className="takeaway__image"
+                                            className="takeaway__item--image"
                                         />
-                                        <div className="takeaway-info">
+                                        <div className="takeaway__item--info">
                                             <h3>{t(item.name)}</h3>
-                                            <p className="takeaway__price">
+                                            <p className="takeaway__item--price">
                                                 {item.price},- Kč
                                             </p>
                                         </div>
@@ -110,16 +113,18 @@ const Top = ({ data }) => {
                             <img
                                 src={selectedItem.image.publicURL}
                                 alt={selectedItem.name}
-                                className="takeaway__image modal__item--image"
+                                className="takeaway__item--image modal__item--image"
                             />
                             <h2>{t(selectedItem.name)}</h2>
                             <div className="modal__info">
-                                <p className="takeaway__price">
+                                <p className="takeaway__item--price">
                                     {selectedItem.price},- Kč
                                 </p>
                                 <p>{selectedItem.grams}</p>
 
-                                <p>{t(selectedItem.note)}</p>
+                                <p className="takeaway__item--note">
+                                    {t(selectedItem.note)}
+                                </p>
                                 <p>
                                     {t('Allergy: ')}
                                     {selectedItem.allergy}

@@ -5,9 +5,13 @@
     // padding: 10px;
 
     &__info {
+        h1 {
+            margin-bottom: 12px;
+        }
+
         &--open {
             font-size: 24px;
-            margin-top: 24px;
+            margin: 24px 0;
         }
 
         &--allergy {
@@ -16,7 +20,7 @@
     }
 
     &__gallery {
-        margin-top: 50px;
+        margin-top: 60px;
 
         display: flex;
         flex-direction: column;
@@ -24,18 +28,23 @@
 
         @include g.bp {
             gap: 40px;
+            margin-top: 42px;
+        }
+
+        &--note {
+            font-style: italic;
         }
     }
 
     &__category {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px 10px;
+        gap: 20px 8px;
         margin-top: 20px;
     }
 
     &__item {
-        width: calc(100% / 4 - 8px);
+        width: calc(100% / 4 - 6px);
         background-color: #fff;
         cursor: pointer;
         border: 1px solid #ddd;
@@ -44,26 +53,39 @@
         transition: transform 0.3s ease;
 
         @include g.bp {
-            width: calc(100% / 2 - 5px);
+            width: calc(100% / 2 - 4px);
         }
 
         &:hover {
             transform: scale(1.05);
         }
-    }
 
-    &__image {
-        width: 100%;
-        height: auto;
-        margin-bottom: 8px;
-    }
+        &--image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 8px;
+        }
 
-    &__info {
-        text-align: center;
-    }
+        &--info {
+            text-align: center;
 
-    &__price {
-        font-weight: bold;
+            h3 {
+                @include g.bp {
+                    font-size: 16px;
+                    line-height: 1.1;
+                }
+            }
+        }
+
+        &--price {
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        &--note {
+            padding: 8px 0;
+            font-style: italic;
+        }
     }
 
     &__others {
@@ -114,9 +136,10 @@
 
     &__close {
         position: absolute;
-        top: 0px;
-        right: 20px;
-        font-size: 30px;
+        top: -6px;
+        right: 12px;
+        font-size: 36px;
         cursor: pointer;
+        z-index: 100;
     }
 }
