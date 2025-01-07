@@ -1,18 +1,20 @@
 @use './global.scss' as g;
+@use './var.scss' as v;
+@use './mixin.scss' as m;
 
 .footer {
     margin-top: 32px;
     width: 100%;
-    background-color: deeppink;
-    color: #fff;
+    background-color: v.$color--deepPink;
+    color: v.$color--white;
 
     &--line {
-        background-color: #fff;
+        background-color: v.$color--white;
         background-size: contain;
         height: 50px;
         background-position: 100% 100%;
         background-repeat: repeat-x;
-        background-image: url('../images/kohaku.png');
+        background-image: url(v.$image--kohakuFlag);
     }
 
     &__wrap {
@@ -22,7 +24,7 @@
         justify-content: space-between;
         gap: 0 20px;
 
-        @include g.bp {
+        @include m.bp {
             flex-direction: column;
             align-items: flex-start;
             padding: 32px 16px 16px;
@@ -32,7 +34,7 @@
     &__inner {
         width: 30%;
 
-        @include g.bp {
+        @include m.bp {
             width: 100%;
         }
     }
@@ -40,20 +42,20 @@
     &__block {
         margin-bottom: 40px;
 
-        @include g.bp {
+        @include m.bp {
             margin-bottom: 28px;
         }
 
         h3 {
             padding-bottom: 20px;
 
-            @include g.bp {
+            @include m.bp {
                 padding-bottom: 12px;
             }
         }
 
         a {
-            color: yellow;
+            color: v.$color--yellow;
         }
 
         &--list {
@@ -89,7 +91,7 @@
     }
 
     .copy-light {
-        background-color: #ac116c91;
+        background-color: v.$color--mediumVioletred;
         text-align: center;
 
         p {

@@ -1,4 +1,6 @@
-@use 'global.scss' as g;
+@use './global.scss' as g;
+@use './var.scss' as v;
+@use './mixin.scss' as m;
 
 .takeaway {
     text-align: center;
@@ -25,7 +27,7 @@
         flex-direction: column;
         gap: 80px;
 
-        @include g.bp {
+        @include m.bp {
             gap: 40px;
             margin-top: 42px;
         }
@@ -44,14 +46,14 @@
 
     &__item {
         width: calc(100% / 4 - 6px);
-        background-color: #fff;
+        background-color: v.$color--white;
         cursor: pointer;
-        border: 1px solid #ddd;
+        border: 1px solid v.$color--lightGray;
         border-radius: 4px;
         padding: 10px;
         transition: transform 0.3s ease;
 
-        @include g.bp {
+        @include m.bp {
             width: calc(100% / 2 - 4px);
         }
 
@@ -69,7 +71,7 @@
             text-align: center;
 
             h3 {
-                @include g.bp {
+                @include m.bp {
                     font-size: 16px;
                     line-height: 1.1;
                 }
@@ -112,19 +114,19 @@
     align-items: center;
     z-index: 1000;
 
-    @include g.bp {
+    @include m.bp {
         padding: 0 20px;
     }
 
     &__item {
         position: relative;
-        background: white;
+        background: v.$color--white;
         padding: 50px 12px 16px;
-        border: 1px solid #ddd;
+        border: 1px solid v.$color--lightGray;
         border-radius: 8px;
         max-width: 500px;
 
-        @include g.bp {
+        @include m.bp {
             margin: 20px 0;
         }
 

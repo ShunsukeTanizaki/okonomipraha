@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
-// import queryString from 'query-string';
 import { useLocation } from '@reach/router';
 
 const Header = () => {

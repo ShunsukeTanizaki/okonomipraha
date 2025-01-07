@@ -2,7 +2,6 @@ import * as React from 'react';
 import { graphql, Link } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import Layout from '../components/Layout';
-// import { StaticImage } from 'gatsby-plugin-image';
 
 const privacyPolicy = () => {
     const { t } = useTranslation();

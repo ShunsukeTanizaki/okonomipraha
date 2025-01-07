@@ -1,8 +1,8 @@
-@use 'global.scss' as g;
+@use './global.scss' as g;
+@use './var.scss' as v;
 
 .allergy-info {
     &--text {
-        color: rgb(192, 11, 71);
         font-size: 16px;
         font-weight: bold;
         text-decoration: underline;
@@ -12,10 +12,10 @@
     &__content {
         margin: 0 10px;
         padding: 16px;
-        background-color: #fff;
+        background-color: v.$color--white;
         position: absolute;
         max-width: 500px;
-        border: 8px solid red;
+        border: 8px solid v.$color--mediumVioletred;
         border-radius: 4px;
     }
 }

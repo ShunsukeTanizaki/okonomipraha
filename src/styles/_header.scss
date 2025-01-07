@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    background-color: rgba(36, 36, 36, 0.3);
+    background-color: rgba(v.$color--black, 0.3);
     padding: 0 20px 0 20px;
     width: 100%;
     z-index: 100;
@@ -17,7 +17,7 @@
         &--home {
             font-size: 28px;
             font-weight: bold;
-            color: v.$color-white;
+            color: v.$color--white;
             text-decoration: none;
             font-family: fantasy, Arial, Helvetica, sans-serif;
         }
@@ -27,7 +27,7 @@
 
         li {
             a {
-                color: v.$color-white;
+                color: v.$color--white;
                 padding-left: 12px;
             }
         }
