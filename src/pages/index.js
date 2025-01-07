@@ -2,13 +2,13 @@ import * as React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import AllergyInfoWithModal from '../components/AllergyInfo';
-// import { StaticImage } from 'gatsby-plugin-image';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { useState } from 'react';
 import '../styles/index.scss';
 
 const Top = ({ data }) => {
-    const categories = data.allTakeawayJson.nodes; // JSONデータ
+    // JSONデータ
+    const categories = data.allTakeawayJson.nodes;
     const { t } = useTranslation(); // 翻訳データ
 
     // ネオン

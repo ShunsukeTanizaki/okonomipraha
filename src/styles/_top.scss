@@ -1,19 +1,21 @@
 @use 'global.scss' as g;
+@use '_var.scss' as v;
+@use './mixin.scss' as m;
 
 .top {
     margin: -60px 0 60px;
     text-align: center;
 
-    @include g.bp {
+    @include m.bp {
         margin: -60px 0 24px;
     }
 
     &__kv {
-        background-color: #fff;
+        background-color: v.$color--white;
 
         &--image {
             background: no-repeat center center/cover;
-            background-image: url('../images/osaka/item07.jpg');
+            background-image: url(v.$image--top-keyVisual);
             height: 680px;
             padding: 30px;
             display: flex;
@@ -28,7 +30,7 @@
             height: 50px;
             background-position: 100% 100%;
             background-repeat: repeat-x;
-            background-image: url('../images/kohaku.png');
+            background-image: url(v.$image--kohakuFlag);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -55,14 +57,14 @@ x-sign {
     filter: saturate(60%);
     animation: flicker steps(100) var(--interval) 1s infinite;
 
-    @include g.bp {
+    @include m.bp {
         font-size: 40px;
     }
 }
 
 @keyframes flicker {
     50% {
-        color: #fff;
+        color: v.$color--white;
         filter: saturate(200%) hue-rotate(20deg);
     }
 }

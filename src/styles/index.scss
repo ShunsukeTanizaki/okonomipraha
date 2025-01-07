@@ -3,14 +3,14 @@
 // Pages
 @use './_top.scss';
 @use './_takeaway.scss';
-@use './_not-found.scss';
-@use './_cookieBanner.scss';
-@use './_cookieReset.scss';
 @use './_privacy-policy.scss';
+@use './_not-found.scss';
 
 // Components
-@use './header.scss';
-@use './footer.scss';
-@use './layout.scss';
+@use './_header.scss';
+@use './_footer.scss';
+@use './_layout.scss';
 
-@use './allergyInfo.scss';
+@use './_allergyInfo.scss';
+@use './_cookieBanner.scss';
+@use './_cookieReset.scss';

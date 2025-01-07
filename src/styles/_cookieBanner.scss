@@ -1,6 +1,8 @@
+@use '_var.scss' as v;
+
 .CookieConsent {
     .link {
-        color: yellow;
+        color: v.$color--yellow;
         text-decoration: underline;
         cursor: pointer;
     }

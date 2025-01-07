@@ -1,13 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
-// import '../styles/404.scss';
-// import SEO from '../components/seo';
 
 const NotFound = () => {
     return (
         <Layout>
-            {/* <SEO title="404 Not Found" description="Page not found" /> */}
             <div className="not-found">
                 <div>
                     <h1>404 Not Found</h1>

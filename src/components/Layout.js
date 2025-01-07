@@ -1,8 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-// import '../styles/index.scss';
-import CookieBanner from '../components/CookieBanner';
+import CookieBanner from './CookieBanner';
 
 const Layout = ({ children }) => {
     return (
