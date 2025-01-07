@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link, useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
-import CookieMessage from '../components/CookieMessage';
+import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
+import CookieReset from './CookieReset';
 
 const Footer = () => {
-    const { languages, originalPath } = useI18next();
     const { t } = useTranslation();
     return (
         <footer className="footer">
@@ -89,8 +88,7 @@ const Footer = () => {
                         <h3>{t('Important documents')}</h3>
                         <ul className="footer__block--list">
                             <li>
-                                <CookieMessage />
-                                {/* <Link to="/">{t('Cookie Settings')}</Link> */}
+                                <CookieReset />
                             </li>
                             <li>
                                 <Link to="/privacy-policy">

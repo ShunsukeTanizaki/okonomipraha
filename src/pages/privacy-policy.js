@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import Layout from '../components/Layout';
 // import { StaticImage } from 'gatsby-plugin-image';
@@ -43,6 +43,10 @@ const privacyPolicy = () => {
                 <p>{t('For inquiries, please contact us at:')}</p>
                 <p>{t('Email: info@okonomipraha.cz')}</p>
                 <p>{t('Address: Rybná 716/24 110 00 Praha 1')}</p>
+
+                <div className="link">
+                    <Link to={t('/')}>{t('To Top')}</Link>
+                </div>
             </div>
         </Layout>
     );
