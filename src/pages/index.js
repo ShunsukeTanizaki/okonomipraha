@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import AllergyInfoWithModal from '../components/AllergyInfo';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/index.scss';
 
 const Top = ({ data }) => {
@@ -11,22 +11,30 @@ const Top = ({ data }) => {
     const categories = data.allTakeawayJson.nodes;
     const { t } = useTranslation(); // 翻訳データ
 
-    // ネオン
-    const signs = document.querySelectorAll('x-sign');
-    const randomIn = (min, max) =>
-        Math.floor(Math.random() * (max - min + 1) + min);
+    // クライアントサイドの処理を管理
+    const [isClient, setIsClient] = useState(false);
 
-    const mixupInterval = (el) => {
-        const ms = randomIn(2000, 4000);
-        el.style.setProperty('--interval', `${ms}ms`);
-    };
+    useEffect(() => {
+        // クライアントサイドでのみ実行する処理
+        setIsClient(true);
 
-    signs.forEach((el) => {
-        mixupInterval(el);
-        el.addEventListener('webkitAnimationIteration', () => {
+        // ネオンの処理
+        const signs = document.querySelectorAll('x-sign');
+        const randomIn = (min, max) =>
+            Math.floor(Math.random() * (max - min + 1) + min);
+
+        const mixupInterval = (el) => {
+            const ms = randomIn(2000, 4000);
+            el.style.setProperty('--interval', `${ms}ms`);
+        };
+
+        signs.forEach((el) => {
             mixupInterval(el);
+            el.addEventListener('webkitAnimationIteration', () => {
+                mixupInterval(el);
+            });
         });
-    });
+    }, []);
 
     // モーダル表示管理
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,14 +44,18 @@ const Top = ({ data }) => {
     const openModal = (item) => {
         setSelectedItem(item);
         setIsModalOpen(true);
-        document.body.classList.add('modal-open');
+        if (isClient) {
+            document.body.classList.add('modal-open');
+        }
     };
 
     // モーダルを閉じる関数
     const closeModal = () => {
         setIsModalOpen(false);
         setSelectedItem(null);
-        document.body.classList.remove('modal-open');
+        if (isClient) {
+            document.body.classList.remove('modal-open');
+        }
     };
 
     return (
