@@ -74,7 +74,7 @@ const Top = ({ data }) => {
 
             <div className="takeaway">
                 <div className="takeaway__info">
-                    <h1>{t('Delivery MENU')}</h1>
+                    <h1>{t('TAKE AWAY MENU')}</h1>
                     <p>{t('One Take away package 20,-')}</p>
                     <h3 className="takeaway__info--open">
                         {t('12:00-14:00 / 17:00-21:00')}
