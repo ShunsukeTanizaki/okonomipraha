@@ -6,6 +6,8 @@
         "items": [
             {
                 "id": "M-1",
+                "display": true,
+                "stock": 1,
                 "name": "Osaka style plain",
                 "grams": "400g",
                 "price": "180",
@@ -15,6 +17,8 @@
             },
             {
                 "id": "M-2",
+                "display": true,
+                "stock": 1,
                 "name": "Osaka Pork grill veg.",
                 "grams": "600g",
                 "price": "280",
@@ -24,6 +28,8 @@
             },
             {
                 "id": "M-3",
+                "display": true,
+                "stock": 1,
                 "name": "Osaka Chicken Egg",
                 "grams": "600g",
                 "price": "280",
@@ -33,6 +39,8 @@
             },
             {
                 "id": "M-4",
+                "display": true,
+                "stock": 1,
                 "name": "Osaka Seafood",
                 "grams": "600g",
                 "price": "320",
@@ -42,6 +50,8 @@
             },
             {
                 "id": "M-5",
+                "display": true,
+                "stock": 1,
                 "name": "Chicken Omu Rice",
                 "grams": "450g",
                 "price": "280",
@@ -58,6 +68,8 @@
         "items": [
             {
                 "id": "B-1",
+                "display": true,
+                "stock": 1,
                 "name": "Kushi Katsu",
                 "grams": "600g",
                 "price": "380",
@@ -67,6 +79,8 @@
             },
             {
                 "id": "B-2",
+                "display": true,
+                "stock": 1,
                 "name": "KARAAGE 5pcs",
                 "grams": "500g",
                 "price": "300",
@@ -76,6 +90,8 @@
             },
             {
                 "id": "B-3",
+                "display": false,
+                "stock": 1,
                 "name": "Teriyaki Tofu and Veg",
                 "grams": "600g",
                 "price": "260",
@@ -85,6 +101,8 @@
             },
             {
                 "id": "B-4",
+                "display": true,
+                "stock": 1,
                 "name": "Fried vegetarian GYOZA 5pcs with PONZU",
                 "grams": "400g",
                 "price": "260",
@@ -101,6 +119,8 @@
         "items": [
             {
                 "id": "S-1",
+                "display": true,
+                "stock": 1,
                 "name": "Miso Soup",
                 "grams": "160ml",
                 "price": "80",
@@ -110,6 +130,8 @@
             },
             {
                 "id": "S-2",
+                "display": true,
+                "stock": 1,
                 "name": "ODEN",
                 "grams": "600g",
                 "price": "220",
@@ -119,6 +141,8 @@
             },
             {
                 "id": "S-3",
+                "display": true,
+                "stock": 1,
                 "name": "Roast Edamame",
                 "grams": "100g",
                 "price": "100",
@@ -128,6 +152,8 @@
             },
             {
                 "id": "S-4",
+                "display": true,
+                "stock": 1,
                 "name": "Assort of Tsukemono Pickles and Kimchi.",
                 "grams": "150g",
                 "price": "150",
@@ -137,6 +163,8 @@
             },
             {
                 "id": "S-5",
+                "display": true,
+                "stock": 1,
                 "name": "Wakame and cucumber salad miso dressing",
                 "grams": "150g",
                 "price": "150",
@@ -146,6 +174,8 @@
             },
             {
                 "id": "S-6",
+                "display": true,
+                "stock": 1,
                 "name": "Takoyaki balls",
                 "grams": "",
                 "price": "120",
@@ -162,6 +192,8 @@
         "items": [
             {
                 "id": "D-1",
+                "display": true,
+                "stock": 1,
                 "name": "Ramune (Japanese soda)",
                 "grams": "200ml",
                 "price": "70",
@@ -171,6 +203,8 @@
             },
             {
                 "id": "D-2",
+                "display": true,
+                "stock": 1,
                 "name": "Kombucha Matcha",
                 "grams": "330ml",
                 "price": "70",
@@ -180,6 +214,8 @@
             },
             {
                 "id": "D-3",
+                "display": true,
+                "stock": 1,
                 "name": "Kombucha Rooibos",
                 "grams": "330ml",
                 "price": "70",
@@ -189,6 +225,8 @@
             },
             {
                 "id": "D-4",
+                "display": true,
+                "stock": 1,
                 "name": "Royal Crown Cola NO SUGER",
                 "grams": "250ml",
                 "price": "70",
@@ -205,6 +243,8 @@
         "items": [
             {
                 "id": "P-1",
+                "display": true,
+                "stock": 1,
                 "name": "Asahi beer",
                 "grams": "330ml",
                 "price": "90",
@@ -214,6 +254,8 @@
             },
             {
                 "id": "P-2",
+                "display": true,
+                "stock": 1,
                 "name": "Kirin beer",
                 "grams": "330ml",
                 "price": "90",
@@ -223,6 +265,8 @@
             },
             {
                 "id": "P-3",
+                "display": true,
+                "stock": 0,
                 "name": "Sapporo beer",
                 "grams": "330ml",
                 "price": "90",

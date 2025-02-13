@@ -92,25 +92,34 @@ const Top = ({ data }) => {
                                 {category.note}
                             </p>
                             <div className="takeaway__category">
-                                {category.items.map((item) => (
-                                    <div
-                                        key={item.id}
-                                        className="takeaway__item"
-                                        onClick={() => openModal(item)}
-                                    >
-                                        <img
-                                            src={item.image.publicURL}
-                                            alt={item.name}
-                                            className="takeaway__item--image"
-                                        />
-                                        <div className="takeaway__item--info">
-                                            <h3>{t(item.name)}</h3>
-                                            <p className="takeaway__item--price">
-                                                {item.price},- Kč
-                                            </p>
+                                {category.items
+                                    .filter((item) => item.display) // display: true のものだけを残す
+                                    .map((item) => (
+                                        <div
+                                            key={item.id}
+                                            className="takeaway__item"
+                                            onClick={() => openModal(item)}
+                                        >
+                                            <img
+                                                src={item.image.publicURL}
+                                                alt={item.name}
+                                                className="takeaway__item--image"
+                                            />
+                                            <div className="takeaway__item--info">
+                                                <h3>{t(item.name)}</h3>
+                                                <p className="takeaway__item--price">
+                                                    {item.price},- Kč
+                                                </p>
+                                            </div>
+                                            {item.stock === 0 && (
+                                                <div className="takeaway__item--status-label sold-out">
+                                                    <span>
+                                                        {t('Waiting list')}
+                                                    </span>
+                                                </div>
+                                            )}
                                         </div>
-                                    </div>
-                                ))}
+                                    ))}
                             </div>
                         </div>
                     ))}
@@ -142,6 +151,11 @@ const Top = ({ data }) => {
                                     {selectedItem.allergy}
                                 </p>
                             </div>
+                            {selectedItem.stock === 0 && (
+                                <div className="takeaway__item--status-label modal__item--status-label sold-out">
+                                    <span>{t('Waiting list')}</span>
+                                </div>
+                            )}
                         </div>
                     </div>
                 )}
@@ -197,6 +211,8 @@ export const query = graphql`
                 note
                 items {
                     id
+                    display
+                    stock
                     name
                     grams
                     price

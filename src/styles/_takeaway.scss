@@ -45,6 +45,7 @@
     }
 
     &__item {
+        position: relative;
         width: calc(100% / 4 - 6px);
         background-color: v.$color--white;
         cursor: pointer;
@@ -86,6 +87,27 @@
         &--note {
             padding: 8px 0;
             font-style: italic;
+        }
+
+        &--status-label {
+            position: absolute;
+            top: 24px;
+            right: 6px;
+            font-size: 16px;
+            color: v.$color--white;
+            font-weight: bold;
+            padding: 6px 12px;
+            transform: rotate(25deg);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+            border-radius: 4px;
+
+            &.sold-out {
+                background: v.$color--deepPink;
+            }
+
+            @include m.bp {
+                font-size: 14px;
+            }
         }
     }
 
@@ -132,6 +154,10 @@
 
         &--image {
             max-height: 450px;
+        }
+
+        &--status-label {
+            top: 60px;
         }
     }
 
