@@ -19,10 +19,10 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="mailto:info@okonomipraha.cz"
-                                    rel="mailto:info@ibcnadoby.cz"
+                                    href="mailto:okonomiyakiizakaya@gmail.com"
+                                    rel="mailto:okonomiyakiizakaya@gmail.com"
                                 >
-                                    info@okonomipraha.cz
+                                    okonomiyakiizakaya@gmail.com
                                 </a>
                             </li>
                         </ul>

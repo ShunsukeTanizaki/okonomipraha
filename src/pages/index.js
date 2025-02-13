@@ -153,7 +153,7 @@ const Top = ({ data }) => {
                     <p>
                         <span>○KARAAGE</span>
                         <span>○Gyoza</span>
-                        <span>○Japanese ice</span>
+                        <span>○Japanese rice</span>
                         <span>○Okonomiyaki Pork</span>
                     </p>
                     <h4>O2-2 Vegan set 750,-</h4>
