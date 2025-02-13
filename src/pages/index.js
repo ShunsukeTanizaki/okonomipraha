@@ -173,9 +173,8 @@ const Top = ({ data }) => {
                     <h4>O2-2 Vegan set 750,-</h4>
                     <p>
                         <span>○Tsukemono</span>
-                        <span>○Gyoza</span>
+                        <span>○Gyoza x 2</span>
                         <span>○Wakame</span>
-                        <span>○Tofu Teriyaki</span>
                         <span>○Japanese rice x 2</span>
                     </p>
                     <h4>O2-3 Osaka set 780,-</h4>
