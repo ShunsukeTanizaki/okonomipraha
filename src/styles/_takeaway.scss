@@ -45,7 +45,6 @@
     }
 
     &__item {
-        position: relative;
         width: calc(100% / 4 - 6px);
         background-color: v.$color--white;
         cursor: pointer;
@@ -60,6 +59,10 @@
 
         &:hover {
             transform: scale(1.05);
+        }
+
+        &--content {
+            position: relative;
         }
 
         &--image {
@@ -81,7 +84,7 @@
 
         &--price {
             font-weight: bold;
-            margin-top: 12px;
+            margin: 8px 0;
         }
 
         &--note {
@@ -91,22 +94,23 @@
 
         &--status-label {
             position: absolute;
-            top: 24px;
-            right: 6px;
-            font-size: 16px;
             color: v.$color--white;
             font-weight: bold;
-            padding: 6px 12px;
             transform: rotate(25deg);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
             border-radius: 4px;
 
             &.sold-out {
                 background: v.$color--deepPink;
-            }
+                top: 18px;
+                right: -6px;
+                font-size: 20px;
+                padding: 6px 12px;
 
-            @include m.bp {
-                font-size: 14px;
+                @include m.bp {
+                    font-size: 14px;
+                    top: 14px;
+                }
             }
         }
     }
@@ -140,10 +144,19 @@
         padding: 0 20px;
     }
 
+    &__close {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        font-size: 36px;
+        cursor: pointer;
+        margin-bottom: 12px;
+    }
+
     &__item {
         position: relative;
         background: v.$color--white;
-        padding: 50px 12px 16px;
+        padding: 4px 12px 12px;
         border: 1px solid v.$color--lightGray;
         border-radius: 8px;
         max-width: 500px;
@@ -152,21 +165,19 @@
             margin: 20px 0;
         }
 
+        &--content {
+            position: relative;
+        }
+
         &--image {
             max-height: 450px;
         }
 
         &--status-label {
-            top: 60px;
+            &.sold-out {
+                font-size: 24px;
+                top: 20px;
+            }
         }
-    }
-
-    &__close {
-        position: absolute;
-        top: -6px;
-        right: 12px;
-        font-size: 36px;
-        cursor: pointer;
-        z-index: 100;
     }
 }

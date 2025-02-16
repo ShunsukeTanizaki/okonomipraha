@@ -100,24 +100,26 @@ const Top = ({ data }) => {
                                             className="takeaway__item"
                                             onClick={() => openModal(item)}
                                         >
-                                            <img
-                                                src={item.image.publicURL}
-                                                alt={item.name}
-                                                className="takeaway__item--image"
-                                            />
-                                            <div className="takeaway__item--info">
-                                                <h3>{t(item.name)}</h3>
-                                                <p className="takeaway__item--price">
-                                                    {item.price},- Kč
-                                                </p>
-                                            </div>
-                                            {item.stock === 0 && (
-                                                <div className="takeaway__item--status-label sold-out">
-                                                    <span>
-                                                        {t('Waiting list')}
-                                                    </span>
+                                            <div className="takeaway__item--content">
+                                                <img
+                                                    src={item.image.publicURL}
+                                                    alt={item.name}
+                                                    className="takeaway__item--image"
+                                                />
+                                                <div className="takeaway__item--info">
+                                                    <h3>{t(item.name)}</h3>
+                                                    <p className="takeaway__item--price">
+                                                        {item.price},- Kč
+                                                    </p>
                                                 </div>
-                                            )}
+                                                {item.stock === 0 && (
+                                                    <div className="takeaway__item--status-label sold-out">
+                                                        <span>
+                                                            {t('Waiting list')}
+                                                        </span>
+                                                    </div>
+                                                )}
+                                            </div>
                                         </div>
                                     ))}
                             </div>
@@ -131,31 +133,33 @@ const Top = ({ data }) => {
                             <span className="modal__close" onClick={closeModal}>
                                 &times;
                             </span>
-                            <img
-                                src={selectedItem.image.publicURL}
-                                alt={selectedItem.name}
-                                className="takeaway__item--image modal__item--image"
-                            />
-                            <h2>{t(selectedItem.name)}</h2>
-                            <div className="modal__info">
-                                <p className="takeaway__item--price">
-                                    {selectedItem.price},- Kč
-                                </p>
-                                <p>{selectedItem.grams}</p>
+                            <div className="modal__item--content">
+                                <img
+                                    src={selectedItem.image.publicURL}
+                                    alt={selectedItem.name}
+                                    className="takeaway__item--image modal__item--image"
+                                />
+                                <h2>{t(selectedItem.name)}</h2>
+                                <div className="modal__info">
+                                    <p className="takeaway__item--price">
+                                        {selectedItem.price},- Kč
+                                    </p>
+                                    <p>{selectedItem.grams}</p>
 
-                                <p className="takeaway__item--note">
-                                    {t(selectedItem.note)}
-                                </p>
-                                <p>
-                                    {t('Allergy: ')}
-                                    {selectedItem.allergy}
-                                </p>
-                            </div>
-                            {selectedItem.stock === 0 && (
-                                <div className="takeaway__item--status-label modal__item--status-label sold-out">
-                                    <span>{t('Waiting list')}</span>
+                                    <p className="takeaway__item--note">
+                                        {t(selectedItem.note)}
+                                    </p>
+                                    <p>
+                                        {t('Allergy: ')}
+                                        {selectedItem.allergy}
+                                    </p>
                                 </div>
-                            )}
+                                {selectedItem.stock === 0 && (
+                                    <div className="takeaway__item--status-label modal__item--status-label sold-out">
+                                        <span>{t('Waiting list')}</span>
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     </div>
                 )}
