@@ -92,25 +92,36 @@ const Top = ({ data }) => {
                                 {category.note}
                             </p>
                             <div className="takeaway__category">
-                                {category.items.map((item) => (
-                                    <div
-                                        key={item.id}
-                                        className="takeaway__item"
-                                        onClick={() => openModal(item)}
-                                    >
-                                        <img
-                                            src={item.image.publicURL}
-                                            alt={item.name}
-                                            className="takeaway__item--image"
-                                        />
-                                        <div className="takeaway__item--info">
-                                            <h3>{t(item.name)}</h3>
-                                            <p className="takeaway__item--price">
-                                                {item.price},- Kč
-                                            </p>
+                                {category.items
+                                    .filter((item) => item.display) // display: true のものだけを残す
+                                    .map((item) => (
+                                        <div
+                                            key={item.id}
+                                            className="takeaway__item"
+                                            onClick={() => openModal(item)}
+                                        >
+                                            <div className="takeaway__item--content">
+                                                <img
+                                                    src={item.image.publicURL}
+                                                    alt={item.name}
+                                                    className="takeaway__item--image"
+                                                />
+                                                <div className="takeaway__item--info">
+                                                    <h3>{t(item.name)}</h3>
+                                                    <p className="takeaway__item--price">
+                                                        {item.price},- Kč
+                                                    </p>
+                                                </div>
+                                                {item.stock === 0 && (
+                                                    <div className="takeaway__item--status-label sold-out">
+                                                        <span>
+                                                            {t('Waiting list')}
+                                                        </span>
+                                                    </div>
+                                                )}
+                                            </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    ))}
                             </div>
                         </div>
                     ))}
@@ -122,25 +133,32 @@ const Top = ({ data }) => {
                             <span className="modal__close" onClick={closeModal}>
                                 &times;
                             </span>
-                            <img
-                                src={selectedItem.image.publicURL}
-                                alt={selectedItem.name}
-                                className="takeaway__item--image modal__item--image"
-                            />
-                            <h2>{t(selectedItem.name)}</h2>
-                            <div className="modal__info">
-                                <p className="takeaway__item--price">
-                                    {selectedItem.price},- Kč
-                                </p>
-                                <p>{selectedItem.grams}</p>
+                            <div className="modal__item--content">
+                                <img
+                                    src={selectedItem.image.publicURL}
+                                    alt={selectedItem.name}
+                                    className="takeaway__item--image modal__item--image"
+                                />
+                                <h2>{t(selectedItem.name)}</h2>
+                                <div className="modal__info">
+                                    <p className="takeaway__item--price">
+                                        {selectedItem.price},- Kč
+                                    </p>
+                                    <p>{selectedItem.grams}</p>
 
-                                <p className="takeaway__item--note">
-                                    {t(selectedItem.note)}
-                                </p>
-                                <p>
-                                    {t('Allergy: ')}
-                                    {selectedItem.allergy}
-                                </p>
+                                    <p className="takeaway__item--note">
+                                        {t(selectedItem.note)}
+                                    </p>
+                                    <p>
+                                        {t('Allergy: ')}
+                                        {selectedItem.allergy}
+                                    </p>
+                                </div>
+                                {selectedItem.stock === 0 && (
+                                    <div className="takeaway__item--status-label modal__item--status-label sold-out">
+                                        <span>{t('Waiting list')}</span>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
@@ -159,9 +177,8 @@ const Top = ({ data }) => {
                     <h4>O2-2 Vegan set 750,-</h4>
                     <p>
                         <span>○Tsukemono</span>
-                        <span>○Gyoza</span>
+                        <span>○Gyoza x 2</span>
                         <span>○Wakame</span>
-                        <span>○Tofu Teriyaki</span>
                         <span>○Japanese rice x 2</span>
                     </p>
                     <h4>O2-3 Osaka set 780,-</h4>
@@ -197,6 +214,8 @@ export const query = graphql`
                 note
                 items {
                     id
+                    display
+                    stock
                     name
                     grams
                     price
