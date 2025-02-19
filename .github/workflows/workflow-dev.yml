@@ -36,7 +36,7 @@ jobs:
               run: npm run test
 
             - name: build
-              run: nom run build
+              run: npm run build
 
             - name: Upload file to S3
               env:
