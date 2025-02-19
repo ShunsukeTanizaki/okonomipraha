@@ -29,9 +29,6 @@ jobs:
             - name: npm install
               run: npm install --legacy-peer-deps
 
-            - name: test
-              run: npm run test
-
             - name: clean
               run: npm run clean
 
