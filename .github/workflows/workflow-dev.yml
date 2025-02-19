@@ -26,8 +26,8 @@ jobs:
                   aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
                   aws-region: eu-central-1
 
-            - name: install
-              run: npm ci
+            - name: npm install
+              run: npm install
 
             - name: format
               run: npm run format
@@ -36,7 +36,7 @@ jobs:
               run: npm run test
 
             - name: build
-              run: npm run build
+              run: nom run build
 
             - name: Upload file to S3
               env:
