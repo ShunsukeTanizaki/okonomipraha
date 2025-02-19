@@ -27,13 +27,13 @@ jobs:
                   aws-region: eu-central-1
 
             - name: npm install
-              run: npm install
-
-            - name: format
-              run: npm run format
+              run: npm install --legacy-peer-deps
 
             - name: test
               run: npm run test
+
+            - name: clean
+              run: npm run clean
 
             - name: build
               run: npm run build
