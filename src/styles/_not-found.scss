@@ -1,0 +1,17 @@
+@use 'global.scss' as g;
+@use '_var.scss' as v;
+
+.not-found {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        text-align: center;
+
+        h1 {
+            margin-bottom: 32px;
+        }
+    }
+}

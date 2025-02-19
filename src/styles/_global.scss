@@ -1,0 +1,60 @@
+@use './_var.scss' as v;
+
+body {
+    background-position: 100% 100%;
+    background-repeat: repeat;
+    background-image: url(v.$image--main-bg);
+    background-color: rgba(v.$color--white, 0.6);
+    background-blend-mode: lighten;
+
+    // font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+    //     'Hiragino Sans', Meiryo, sans-serif;
+
+    color: v.$color--font;
+    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
+        'Arial', sans-serif;
+
+    &.modal-open {
+        overflow: hidden;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: v.$color--mediumVioletred;
+
+    &:hover {
+        opacity: 0.7;
+        transition: 0.3s;
+    }
+}
+
+.text-left {
+    text-align: left;
+}
+
+.menu-category {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before,
+    &::after {
+        content: '';
+        height: 2px;
+        flex-grow: 0.2;
+        background-color: v.$color--black;
+    }
+
+    &::before {
+        margin-right: 1rem;
+    }
+
+    &::after {
+        margin-left: 1rem;
+    }
+}

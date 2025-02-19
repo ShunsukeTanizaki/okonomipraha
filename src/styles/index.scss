@@ -1,0 +1,16 @@
+@charset 'UTF-8';
+
+// Pages
+@use './_top.scss';
+@use './_takeaway.scss';
+@use './_privacy-policy.scss';
+@use './_not-found.scss';
+
+// Components
+@use './_header.scss';
+@use './_footer.scss';
+@use './_layout.scss';
+
+@use './_allergyInfo.scss';
+@use './_cookieBanner.scss';
+@use './_cookieReset.scss';

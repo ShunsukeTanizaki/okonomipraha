@@ -1,0 +1,279 @@
+[
+    {
+        "id": "1",
+        "name": "Okonomiyaki",
+        "note": "Japanese cabbage pancake with special Okonomiyaki sauce and Japanese mayo. With ''Katsuo Bushi'' (Tuna flake )",
+        "items": [
+            {
+                "id": "M-1",
+                "display": true,
+                "stock": 1,
+                "name": "Osaka style plain",
+                "grams": "400g",
+                "price": "180",
+                "image": "../images/takeaway/m-1.jpg",
+                "allergy": "1, 3, 4, 6, 10",
+                "note": "Plain Osaka style 🐟Tuna flakes on top (without Tuna flakes will be Vegetarian)"
+            },
+            {
+                "id": "M-2",
+                "display": true,
+                "stock": 1,
+                "name": "Osaka Pork grill veg.",
+                "grams": "600g",
+                "price": "280",
+                "image": "../images/takeaway/m-2.jpg",
+                "allergy": "1, 3, 4, 6, 10",
+                "note": "Grilled pork belly and vegetables top on (🐟Tuna flake)"
+            },
+            {
+                "id": "M-3",
+                "display": true,
+                "stock": 1,
+                "name": "Osaka Chicken Egg",
+                "grams": "600g",
+                "price": "280",
+                "image": "../images/takeaway/m-3.jpg",
+                "allergy": "1, 3, 4, 6, 10",
+                "note": "Grilled chicken and sunny side up egg on top (🐟Tuna flake)"
+            },
+            {
+                "id": "M-4",
+                "display": true,
+                "stock": 1,
+                "name": "Osaka Seafood",
+                "grams": "600g",
+                "price": "320",
+                "image": "../images/takeaway/m-4.jpg",
+                "allergy": "1, 2, 3, 4, 6, 10, 14",
+                "note": "Shrimp, squid, mussel, fish seafood mix on top."
+            },
+            {
+                "id": "M-5",
+                "display": true,
+                "stock": 1,
+                "name": "Chicken Omu Rice",
+                "grams": "450g",
+                "price": "280",
+                "image": "../images/takeaway/m-5.jpg",
+                "allergy": "3, 6",
+                "note": "Soft omelet topped on chicken fried rice."
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "BENTO",
+        "note": "Take away special set (with rice, Tsukemono pickles)",
+        "items": [
+            {
+                "id": "B-1",
+                "display": true,
+                "stock": 1,
+                "name": "Kushi Katsu",
+                "grams": "600g",
+                "price": "380",
+                "image": "../images/takeaway/b-1.jpg",
+                "allergy": "1, 3, 6, 10",
+                "note": "Panko fried pork, shiitake, onion, jalapeño cheese."
+            },
+            {
+                "id": "B-2",
+                "display": true,
+                "stock": 1,
+                "name": "KARAAGE 5pcs",
+                "grams": "500g",
+                "price": "300",
+                "image": "../images/takeaway/b-2.jpg",
+                "allergy": "3, 6",
+                "note": "Japanese style Fried chicken and Japanese mayonnaise."
+            },
+            {
+                "id": "B-3",
+                "display": false,
+                "stock": 1,
+                "name": "Teriyaki Tofu and Veg",
+                "grams": "600g",
+                "price": "260",
+                "image": "../images/takeaway/b-3.jpg",
+                "allergy": "-",
+                "note": "Vegan meal =Teppanyaki tofu seasoning with Gluten free Teriyaki sauce."
+            },
+            {
+                "id": "B-4",
+                "display": true,
+                "stock": 1,
+                "name": "Fried vegetarian GYOZA 5pcs with PONZU",
+                "grams": "400g",
+                "price": "260",
+                "image": "../images/takeaway/b-4.jpg",
+                "allergy": "1, 6",
+                "note": "Vegan meal = Fried Japanese style Gyoza dumpling with house made PONZU citrus soy sauce."
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Side dish",
+        "note": "Small starters as Takoyaki balls",
+        "items": [
+            {
+                "id": "S-1",
+                "display": true,
+                "stock": 1,
+                "name": "Miso Soup",
+                "grams": "160ml",
+                "price": "80",
+                "image": "../images/takeaway/s-1.jpg",
+                "allergy": "6",
+                "note": "Vegan soup = Tofu, Wakame, spring onion."
+            },
+            {
+                "id": "S-2",
+                "display": true,
+                "stock": 1,
+                "name": "ODEN",
+                "grams": "600g",
+                "price": "220",
+                "image": "../images/takeaway/s-2.jpg",
+                "allergy": "3, 4, 6, 10",
+                "note": "Japanese fish broth pot-au-feu. (NARUTO, Hanpen-fluffy fish cake, Konnyaku-mannan potato cake, daikon radish, grilled tofu, shiitake, egg)"
+            },
+            {
+                "id": "S-3",
+                "display": true,
+                "stock": 1,
+                "name": "Roast Edamame",
+                "grams": "100g",
+                "price": "100",
+                "image": "../images/takeaway/s-3.jpg",
+                "allergy": "6, 10",
+                "note": "Vegan = Teppan Roast edamame. Shichimi chill on side."
+            },
+            {
+                "id": "S-4",
+                "display": true,
+                "stock": 1,
+                "name": "Assort of Tsukemono Pickles and Kimchi.",
+                "grams": "150g",
+                "price": "150",
+                "image": "../images/takeaway/s-4.jpg",
+                "allergy": "-",
+                "note": "Vegan = Season Tsukemono style Japanese pickles and house made kimuchi."
+            },
+            {
+                "id": "S-5",
+                "display": true,
+                "stock": 1,
+                "name": "Wakame and cucumber salad miso dressing",
+                "grams": "150g",
+                "price": "150",
+                "image": "../images/takeaway/s-5.jpg",
+                "allergy": "6, 11",
+                "note": "Vegan = Sesame seed on top."
+            },
+            {
+                "id": "S-6",
+                "display": true,
+                "stock": 1,
+                "name": "Takoyaki balls",
+                "grams": "",
+                "price": "120",
+                "image": "../images/takeaway/s-6.jpg",
+                "allergy": "1, 3, 6",
+                "note": "4cm x 4 pcs,  Octopus balls (🐟Tuna flake)"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Drinks",
+        "note": "Can and bottled Non-alcohol beverage",
+        "items": [
+            {
+                "id": "D-1",
+                "display": true,
+                "stock": 1,
+                "name": "Ramune (Japanese soda)",
+                "grams": "200ml",
+                "price": "70",
+                "image": "../images/takeaway/d-1.jpg",
+                "allergy": "-",
+                "note": "Osaka Hata brand Japanese soda."
+            },
+            {
+                "id": "D-2",
+                "display": true,
+                "stock": 1,
+                "name": "Kombucha Matcha",
+                "grams": "330ml",
+                "price": "70",
+                "image": "../images/takeaway/d-2.jpg",
+                "allergy": "",
+                "note": "Matcha 0.3%"
+            },
+            {
+                "id": "D-3",
+                "display": true,
+                "stock": 1,
+                "name": "Kombucha Rooibos",
+                "grams": "330ml",
+                "price": "70",
+                "image": "../images/takeaway/d-3.jpg",
+                "allergy": "-",
+                "note": "Non caffein"
+            },
+            {
+                "id": "D-4",
+                "display": true,
+                "stock": 1,
+                "name": "Royal Crown Cola NO SUGER",
+                "grams": "250ml",
+                "price": "70",
+                "image": "../images/takeaway/d-4.jpg",
+                "allergy": "",
+                "note": "No sugar"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Alcohols",
+        "note": "Alcohol drinks",
+        "items": [
+            {
+                "id": "P-1",
+                "display": true,
+                "stock": 1,
+                "name": "Asahi beer",
+                "grams": "330ml",
+                "price": "90",
+                "image": "../images/takeaway/p-1.jpg",
+                "allergy": "1",
+                "note": "5.0% alcohol"
+            },
+            {
+                "id": "P-2",
+                "display": true,
+                "stock": 1,
+                "name": "Kirin beer",
+                "grams": "330ml",
+                "price": "90",
+                "image": "../images/takeaway/p-2.jpg",
+                "allergy": "1",
+                "note": "5.0% alcohol"
+            },
+            {
+                "id": "P-3",
+                "display": true,
+                "stock": 0,
+                "name": "Sapporo beer",
+                "grams": "330ml",
+                "price": "90",
+                "image": "../images/takeaway/p-3.jpg",
+                "allergy": "1",
+                "note": "4.7% alcohol"
+            }
+        ]
+    }
+]

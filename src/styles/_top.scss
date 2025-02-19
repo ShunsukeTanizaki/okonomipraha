@@ -1,0 +1,70 @@
+@use 'global.scss' as g;
+@use '_var.scss' as v;
+@use './mixin.scss' as m;
+
+.top {
+    margin: -60px 0 60px;
+    text-align: center;
+
+    @include m.bp {
+        margin: -60px 0 24px;
+    }
+
+    &__kv {
+        background-color: v.$color--white;
+
+        &--image {
+            background: no-repeat center center/cover;
+            background-image: url(v.$image--top-keyVisual);
+            height: 680px;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+        }
+
+        &--line {
+            background-size: contain;
+            height: 50px;
+            background-position: 100% 100%;
+            background-repeat: repeat-x;
+            background-image: url(v.$image--kohakuFlag);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+        }
+    }
+}
+
+x-sign {
+    color: rgb(253, 204, 204);
+    --color1: pink;
+    --color2: rgb(255, 81, 162);
+    --color3: #ff00f7;
+    --color4: rgb(157, 0, 255);
+    font-size: 60px;
+    font-family: fantasy, Sriracha;
+    font-weight: bold;
+    --interval: 3s; //変化時間
+    display: block;
+    text-shadow: 0 0 10px var(--color1), 0 0 20px var(--color2),
+        0 0 40px var(--color3), 0 0 80px var(--color4);
+    will-change: filter, color;
+    filter: saturate(60%);
+    animation: flicker steps(100) var(--interval) 1s infinite;
+
+    @include m.bp {
+        font-size: 40px;
+    }
+}
+
+@keyframes flicker {
+    50% {
+        color: v.$color--white;
+        filter: saturate(200%) hue-rotate(20deg);
+    }
+}
