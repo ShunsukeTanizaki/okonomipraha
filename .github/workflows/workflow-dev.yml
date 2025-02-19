@@ -43,3 +43,7 @@ jobs:
         uses: jonelantha/gatsby-s3-action@v3
         with:
           dest-s3-bucket: ${{ secrets.S3_CONTENTS_BUCKET }}
+
+      - name: Clear cache
+        run: |
+         aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
