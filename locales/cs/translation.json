@@ -1,10 +1,12 @@
 {
+    "Izakaya": "Izakaya",
     "Home": "Home",
     "Menu": "Menu",
     "Takeaway": "Takeaway",
-    "“For allergy sufferers”": "“Seznam alergenů”",
-
-    "Allergy: ": "Alergie: ",
+    "To Top": "To Top",
+    "cz": "cz",
+    "en": "en",
+    "ja": "ja",
 
     "Reservation & contact": "Rezervace & kontakty",
     "Follow the latest news": "Sledujte novinky",
@@ -20,10 +22,27 @@
     "Important documents": "Důležité dokumenty",
     "Cookie Settings": "Nastavení cookies",
     "Privacy Policy": "Ochrana osobních údajů",
+    "This website uses cookies. Please refer to our policy for more details.": "This website uses cookies. Please refer to our policy for more details.",
+
+    "Okonomiyaki": "Okonomiyaki",
+    "BENTO": "BENTO",
+    "Side dish": "Side dish",
+    "Drinks": "Drinks",
+    "Alcohols": "Alcohols",
+
+    "Osaka style plain": "Osaka style plain",
+
+    "Waiting list": "Waiting list",
+    "Allergy": "Alergie",
+    "“For allergy sufferers”": "“Seznam alergenů”",
+    "TAKE AWAY MENU": "TAKE AWAY MENU",
+    "One Take away package 20,-": "One Take away package 20,-",
+    "Recommendation": "Recommendation",
 
     "Our restaurant is committed to protecting the privacy of our customers in the Czech Republic. This policy explains how we collect, use, store, and share your personal information.": "Naše restaurace se zavazuje chránit soukromí našich zákazníků v České republice. Tyto zásady vysvětlují, jak shromažďujeme, používáme, ukládáme a sdílíme vaše osobní údaje.",
     "Information We Collect": "Shromažďované informace",
     "Name": "Jméno",
+    "Email": "Email",
     "Email address": "Emailová adresa",
     "Phone number": "Telefonní číslo",
     "Reservation details": "Podrobnosti o rezervaci",
@@ -34,7 +53,5 @@
     "Google Analytics: Traffic analysis of site visitors": "Google Analytics: Analýza provozu návštěvníků stránek",
     "Facebook Pixel: Marketing purposes": "Facebook Pixel: Marketingové účely",
     "Contact": "Kontakt",
-    "For inquiries, please contact us at:": "V případě dotazů nás kontaktujte na:",
-    "Email: info@okonomipraha.cz": "Email: info@okonomipraha.cz",
-    "Address: Rybná 716/24 110 00 Praha 2": "Adresa: Rybná 716/24 110 00 Praha 2"
+    "For inquiries, please contact us at:": "V případě dotazů nás kontaktujte na:"
 }
