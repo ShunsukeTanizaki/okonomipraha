@@ -1,25 +1,12 @@
 {
+    "Izakaya": "Izakaya",
     "Home": "Home",
-    "To Top": "Top へ戻る",
     "Menu": "メニュー",
     "Takeaway": "お持ち帰り",
-    "One Take away package 20,-": "持ち帰り用パッケージ 20,-",
-    "“For allergy sufferers”": "“アレルギーをお持ちの方へ”",
-
-    "TAKE AWAY MENU": "お持ち帰りメニュー",
-    "“Informane o alergenech Vám poskytne obsluha”": "“アレルギーをお持ちの方への情報提供”",
-    "12:00-14:00 / 17:00-21:00": "12:00-14:00 / 17:00-21:00",
-    "Okonomiyaki": "お好み焼き",
-    "BENTO": "お弁当",
-    "Side dish": "サイドメニュー",
-    "Drinks": "ソフトドリンク",
-    "Alcohols": "アルコール",
-    "Recommendation": "おすすめ",
-
-    "Waiting list": "入荷待ち ",
-
-    "Allergy": "アレルギー",
-    "Osaka style plain": "大阪風お好み焼き",
+    "To Top": "Top へ戻る",
+    "cz": "cz",
+    "en": "en",
+    "ja": "ja",
 
     "Reservation & contact": "ご予約・お問い合わせ",
     "Follow the latest news": "最新ニュース",
@@ -34,11 +21,28 @@
     "Business ID (IČ): 21474991": "会社登録番号 (IČ): 21474991",
     "Important documents": "重要事項",
     "Cookie Settings": "Cookieの設定",
-
     "Privacy Policy": "プライバシーポリシー",
+    "This website uses cookies. Please refer to our policy for more details.": "このサイトではCookieを使用しています。詳細についてはポリシーをご確認ください。",
+
+    "Okonomiyaki": "お好み焼き",
+    "BENTO": "お弁当",
+    "Side dish": "サイドメニュー",
+    "Drinks": "ソフトドリンク",
+    "Alcohols": "アルコール",
+
+    "Osaka style plain": "大阪風お好み焼き",
+
+    "Waiting list": "入荷待ち",
+    "Allergy": "アレルギー",
+    "“For allergy sufferers”": "“アレルギーをお持ちの方へ”",
+    "TAKE AWAY MENU": "お持ち帰りメニュー",
+    "One Take away package 20,-": "持ち帰り用パッケージ 20,-",
+    "Recommendation": "おすすめ",
+
     "Our restaurant is committed to protecting the privacy of our customers in the Czech Republic. This policy explains how we collect, use, store, and share your personal information.": "当レストランは、チェコ国内のお客様に対して個人情報の保護を重視しています。本ポリシーは、収集した情報の利用目的、保存方法、および第三者への共有について説明します。",
     "Information We Collect": "収集する情報",
     "Name": "名前",
+    "Email": "Email",
     "Email address": "メールアドレス",
     "Phone number": "電話番号",
     "Reservation details": "予約情報",
@@ -49,8 +53,5 @@
     "Google Analytics: Traffic analysis of site visitors": "Google Analytics: サイト訪問者のトラフィック解析",
     "Facebook Pixel: Marketing purposes": "Facebook Pixel: マーケティング目的",
     "Contact": "連絡先",
-    "For inquiries, please contact us at:": "お問い合わせは以下までご連絡ください。",
-    "Email": "Email",
-
-    "This website uses cookies. Please refer to our policy for more details.": "このサイトではCookieを使用しています。詳細についてはポリシーをご確認ください。"
+    "For inquiries, please contact us at:": "お問い合わせは以下までご連絡ください。"
 }
