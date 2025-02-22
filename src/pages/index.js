@@ -150,7 +150,8 @@ const Top = ({ data }) => {
                                         {t(selectedItem.note)}
                                     </p>
                                     <p>
-                                        {t('Allergy: ')}
+                                        {t('Allergy')}
+                                        {t(': ')}
                                         {selectedItem.allergy}
                                     </p>
                                 </div>
