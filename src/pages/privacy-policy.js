@@ -16,10 +16,10 @@ const privacyPolicy = () => {
                 </p>
                 <h2>{t('Information We Collect')}</h2>
                 <ul>
-                    <li>- {t('Name')}</li>
-                    <li>- {t('Email address')}</li>
-                    <li>- {t('Phone number')}</li>
-                    <li>- {t('Reservation details')}</li>
+                    <li>{t('Name')}</li>
+                    <li>{t('Email address')}</li>
+                    <li>{t('Phone number')}</li>
+                    <li>{t('Reservation details')}</li>
                 </ul>
                 <h2>{t('Cookies')}</h2>
                 <p>
@@ -31,17 +31,22 @@ const privacyPolicy = () => {
                 <p>{t('We use the following third-party services:')}</p>
                 <ul>
                     <li>
-                        -
                         {t(
                             'Google Analytics: Traffic analysis of site visitors'
                         )}
                     </li>
-                    <li>- {t('Facebook Pixel: Marketing purposes')}</li>
+                    <li>{t('Facebook Pixel: Marketing purposes')}</li>
                 </ul>
                 <h2>{t('Contact')}</h2>
                 <p>{t('For inquiries, please contact us at:')}</p>
-                <p>{t('Email: info@okonomipraha.cz')}</p>
-                <p>{t('Address: Rybná 716/24 110 00 Praha 1')}</p>
+                <p>
+                    {t('Email')}:{t(' ')}
+                    <span>okonomiyakiizakaya@gmail.com</span>
+                </p>
+                <p>
+                    {t('Address')}
+                    <span>{t('Rybná 716/24 110 00 Praha 1')}</span>
+                </p>
 
                 <div className="link">
                     <Link to={t('/')}>{t('To Top')}</Link>
