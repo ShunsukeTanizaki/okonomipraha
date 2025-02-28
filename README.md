@@ -13,3 +13,5 @@ cd okonomipraha
 yarn
 gatusby develop
 ```
+
+`localhost:8000`
