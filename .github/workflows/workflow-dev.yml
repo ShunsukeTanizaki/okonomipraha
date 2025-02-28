@@ -40,7 +40,4 @@ jobs:
                   aws-region: eu-central-1
 
             - name: Deploy to S3
-              uses: jonelantha/gatsby-s3-action@v3
-              with:
-                  dest-s3-bucket: ${{ secrets.S3_CONTENTS_BUCKET_DEV }}
-                  args: --acl public-read
+              run: aws s3 sync ./public s3://${{ secrets.S3_CONTENTS_BUCKET_DEV }} --acl public-read
