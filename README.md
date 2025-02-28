@@ -20,3 +20,9 @@ gatusby develop
 ```
 
 `localhost:8000`
+
+ビルド
+
+```
+gatusby build
+```
