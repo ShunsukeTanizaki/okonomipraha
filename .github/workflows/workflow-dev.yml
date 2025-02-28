@@ -43,3 +43,4 @@ jobs:
               uses: jonelantha/gatsby-s3-action@v3
               with:
                   dest-s3-bucket: ${{ secrets.S3_CONTENTS_BUCKET_DEV }}
+                  args: --acl public-read
