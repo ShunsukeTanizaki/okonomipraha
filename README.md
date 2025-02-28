@@ -11,6 +11,11 @@ git@github.com:ShunsukeTanizaki/okonomipraha.git
 ```
 cd okonomipraha
 yarn
+```
+
+ローカル開発
+
+```
 gatusby develop
 ```
 
