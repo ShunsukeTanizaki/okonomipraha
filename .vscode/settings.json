@@ -3,5 +3,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "files.autoSave": "onFocusChange",
     "prettier.singleQuote": true,
-    "prettier.tabWidth": 4
+    "prettier.tabWidth": 4,
+    "prettier.printWidth": 120
 }
