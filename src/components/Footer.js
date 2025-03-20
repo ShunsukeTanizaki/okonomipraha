@@ -49,7 +49,7 @@ const Footer = () => {
                         <address className="footer__block--text">
                             {t('Veletržní 820/73')}
                             <br />
-                            {t('170 00 Prague 7')}
+                            {t('170 00 Praha 7')}
                         </address>
                         <div className="footer__map">
                             <iframe
@@ -70,13 +70,13 @@ const Footer = () => {
 
                 <div className="footer__inner">
                     <div className="footer__block">
-                        <h3>{t('Invoicing details')}</h3>
+                        <h3>{t('Company Information')}</h3>
                         <p className="footer__block--text">
                             {t('Happy Hedge Hog Habour House s.r.o.')}
                             <br />
                             {t('Rybná 716/24')}
                             <br />
-                            {t('110 00 Prague 1')}
+                            {t('110 00 Praha 1')}
                             <br />
                             <span className="footer__block--business-id">
                                 {t('Business ID (IČ): 21474991')}

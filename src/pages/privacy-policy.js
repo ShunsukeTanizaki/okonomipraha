@@ -44,8 +44,12 @@ const privacyPolicy = () => {
                     <span>okonomiyakiizakaya@gmail.com</span>
                 </p>
                 <p>
-                    {t('Address')}
-                    <span>{t('Rybná 716/24 110 00 Praha 1')}</span>
+                    {t('Address')}:{t(' ')}
+                    <span>
+                        {t('Rybná 716/24')}
+                        {t(' ')}
+                        {t('110 00 Praha 1')}
+                    </span>
                 </p>
 
                 <div className="link">
