@@ -7,7 +7,10 @@
 Environment
 
 ```
-node version: 22.14.0
+yarn version: 1.22.22
+(npm  version: 10.9.2)
+node version: v22.14.0
+Gatsby CLI version: 5.14.0
 ```
 
 Set Up

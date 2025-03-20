@@ -13,15 +13,10 @@ const Footer = () => {
                         <h3>{t('Reservation & contact')}</h3>
                         <ul className="footer__block--list">
                             <li>
-                                <a href="tel:+420606786822">
-                                    (+420) 606 786 822
-                                </a>
+                                <a href="tel:+420606786822">(+420) 606 786 822</a>
                             </li>
                             <li>
-                                <a
-                                    href="mailto:okonomiyakiizakaya@gmail.com"
-                                    rel="mailto:okonomiyakiizakaya@gmail.com"
-                                >
+                                <a href="mailto:okonomiyakiizakaya@gmail.com" rel="mailto:okonomiyakiizakaya@gmail.com">
                                     okonomiyakiizakaya@gmail.com
                                 </a>
                             </li>
@@ -32,10 +27,7 @@ const Footer = () => {
                         <h3>{t('Follow the latest news')}</h3>
                         <ul className="footer__block--list">
                             <li>
-                                <a
-                                    href="https://www.instagram.com/okonomiyakiizakaya/"
-                                    target="blank"
-                                >
+                                <a href="https://www.instagram.com/okonomiyakiizakaya/" target="blank">
                                     Instagram
                                 </a>
                             </li>
@@ -49,7 +41,7 @@ const Footer = () => {
                         <address className="footer__block--text">
                             {t('Veletržní 820/73')}
                             <br />
-                            {t('170 00 Prague 7')}
+                            {t('170 00 Praha 7')}
                         </address>
                         <div className="footer__map">
                             <iframe
@@ -59,10 +51,7 @@ const Footer = () => {
                                 referrerPolicy="no-referrer-when-downgrade"
                             ></iframe>
                         </div>
-                        <a
-                            href="https://maps.app.goo.gl/DqBJrs6ehK3W5M1HA"
-                            target="blank"
-                        >
+                        <a href="https://maps.app.goo.gl/DqBJrs6ehK3W5M1HA" target="blank">
                             {t('Open in Google Maps')}
                         </a>
                     </div>
@@ -70,17 +59,15 @@ const Footer = () => {
 
                 <div className="footer__inner">
                     <div className="footer__block">
-                        <h3>{t('Invoicing details')}</h3>
+                        <h3>{t('Company Information')}</h3>
                         <p className="footer__block--text">
                             {t('Happy Hedge Hog Habour House s.r.o.')}
                             <br />
                             {t('Rybná 716/24')}
                             <br />
-                            {t('110 00 Prague 1')}
+                            {t('110 00 Praha 1')}
                             <br />
-                            <span className="footer__block--business-id">
-                                {t('Business ID (IČ): 21474991')}
-                            </span>
+                            <span className="footer__block--business-id">{t('Business ID (IČ): 21474991')}</span>
                         </p>
                     </div>
 
@@ -91,9 +78,7 @@ const Footer = () => {
                                 <CookieReset />
                             </li>
                             <li>
-                                <Link to="/privacy-policy">
-                                    {t('Privacy Policy')}
-                                </Link>
+                                <Link to="/privacy-policy">{t('Privacy Policy')}</Link>
                             </li>
                         </ul>
                     </div>

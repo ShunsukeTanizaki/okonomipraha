@@ -30,11 +30,7 @@ const privacyPolicy = () => {
                 <h2>{t('Third-Party Services')}</h2>
                 <p>{t('We use the following third-party services:')}</p>
                 <ul>
-                    <li>
-                        {t(
-                            'Google Analytics: Traffic analysis of site visitors'
-                        )}
-                    </li>
+                    <li>{t('Google Analytics: Traffic analysis of site visitors')}</li>
                     <li>{t('Facebook Pixel: Marketing purposes')}</li>
                 </ul>
                 <h2>{t('Contact')}</h2>
@@ -44,8 +40,12 @@ const privacyPolicy = () => {
                     <span>okonomiyakiizakaya@gmail.com</span>
                 </p>
                 <p>
-                    {t('Address')}
-                    <span>{t('Rybná 716/24 110 00 Praha 1')}</span>
+                    {t('Address')}:{t(' ')}
+                    <span>
+                        {t('Rybná 716/24')}
+                        {t(' ')}
+                        {t('110 00 Praha 1')}
+                    </span>
                 </p>
 
                 <div className="link">
@@ -74,14 +74,8 @@ export const query = graphql`
 export const Head = () => (
     <>
         <title>Privacy Policy | Izakaya</title>
-        <meta
-            name="description"
-            content="Privacy-policy and Official information"
-        />
+        <meta name="description" content="Privacy-policy and Official information" />
         {/* <!-- reset.css ress --> */}
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/ress/dist/ress.min.css"
-        />
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     </>
 );
