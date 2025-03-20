@@ -4,7 +4,13 @@
   </a>
 </h1>
 
-1. Set Up
+Environment
+
+```
+node version: 22.14.0
+```
+
+Set Up
 
 ```shell
 git clone git@github.com:ShunsukeTanizaki/okonomipraha.git
