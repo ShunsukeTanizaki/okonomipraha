@@ -13,10 +13,15 @@ const Footer = () => {
                         <h3>{t('Reservation & contact')}</h3>
                         <ul className="footer__block--list">
                             <li>
-                                <a href="tel:+420606786822">(+420) 606 786 822</a>
+                                <a href="tel:+420606786822">
+                                    (+420) 606 786 822
+                                </a>
                             </li>
                             <li>
-                                <a href="mailto:okonomiyakiizakaya@gmail.com" rel="mailto:okonomiyakiizakaya@gmail.com">
+                                <a
+                                    href="mailto:okonomiyakiizakaya@gmail.com"
+                                    rel="mailto:okonomiyakiizakaya@gmail.com"
+                                >
                                     okonomiyakiizakaya@gmail.com
                                 </a>
                             </li>
@@ -27,7 +32,10 @@ const Footer = () => {
                         <h3>{t('Follow the latest news')}</h3>
                         <ul className="footer__block--list">
                             <li>
-                                <a href="https://www.instagram.com/okonomiyakiizakaya/" target="blank">
+                                <a
+                                    href="https://www.instagram.com/okonomiyakiizakaya/"
+                                    target="blank"
+                                >
                                     Instagram
                                 </a>
                             </li>
@@ -51,7 +59,10 @@ const Footer = () => {
                                 referrerPolicy="no-referrer-when-downgrade"
                             ></iframe>
                         </div>
-                        <a href="https://maps.app.goo.gl/DqBJrs6ehK3W5M1HA" target="blank">
+                        <a
+                            href="https://maps.app.goo.gl/DqBJrs6ehK3W5M1HA"
+                            target="blank"
+                        >
                             {t('Open in Google Maps')}
                         </a>
                     </div>
@@ -67,7 +78,9 @@ const Footer = () => {
                             <br />
                             {t('110 00 Praha 1')}
                             <br />
-                            <span className="footer__block--business-id">{t('Business ID (IČ): 21474991')}</span>
+                            <span className="footer__block--business-id">
+                                {t('Business ID (IČ): 21474991')}
+                            </span>
                         </p>
                     </div>
 
@@ -78,7 +91,9 @@ const Footer = () => {
                                 <CookieReset />
                             </li>
                             <li>
-                                <Link to="/privacy-policy">{t('Privacy Policy')}</Link>
+                                <Link to="/privacy-policy">
+                                    {t('Privacy Policy')}
+                                </Link>
                             </li>
                         </ul>
                     </div>
