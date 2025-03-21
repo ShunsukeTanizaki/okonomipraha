@@ -6,21 +6,15 @@ const Header = () => {
     const { t } = useTranslation();
     return (
         <div className="header">
-            <p>Header</p>
-            <div className="header__links">
-                <Link to="/">{t('Home')}</Link>
-                <Link to="/menu">{t('Menu')}</Link>
-                <Link to="/takeaway">{t('Takeaway')}</Link>
-                <ul className="header__links--languages">
-                    {languages.map((lng) => (
-                        <li key={lng}>
-                            <Link to={originalPath} language={lng}>
-                                {lng}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+            <ul className="languages">
+                {languages.map((lng) => (
+                    <li key={lng}>
+                        <Link to={originalPath} language={lng}>
+                            {lng}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 };

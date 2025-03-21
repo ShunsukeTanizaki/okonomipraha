@@ -1,10 +1,12 @@
 .footer {
+    width: 100%;
     background: #2b0809;
-    color: #fff;
-    &__links {
-        display: flex;
-        p {
-            margin: 0 20px;
-        }
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    p {
+        color: #fff;
+        padding: 20px 0;
     }
 }

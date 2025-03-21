@@ -12,10 +12,8 @@ export default function Home() {
             <div>
                 <div className="top">
                     <h1>{t('greeting')}</h1>
-                    <StaticImage
-                        alt="猫かわいい！"
-                        src="../images/hiroki-komiya.png"
-                    />
+                    <StaticImage className="img" alt="Hiiroki Komiya" src="../images/hiroki-komiya.png" />
+                    <h3>{t('greeting2')}</h3>
                 </div>
             </div>
         </Layout>
@@ -40,9 +38,6 @@ export const Head = () => (
         <title>祭：お好み焼き居酒屋 プラハ</title>
         <meta name="description" content="This is the homepage…" />
         {/* <!-- reset.css ress --> */}
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/ress/dist/ress.min.css"
-        />
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     </>
 );

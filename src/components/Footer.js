@@ -6,21 +6,7 @@ const Footer = () => {
     const { t } = useTranslation();
     return (
         <div className="footer">
-            <p>Footer</p>
-            <div className="footer__links">
-                <Link to="/">{t('Home')}</Link>
-                <p>{t('Contact')}</p>
-                <p>{t('Address')}</p>
-                {/* <ul className="footer__links--languages">
-                    {languages.map((lng) => (
-                        <li key={lng}>
-                            <Link to={originalPath} language={lng}>
-                                {lng}
-                            </Link>
-                        </li>
-                    ))}
-                </ul> */}
-            </div>
+            <p>© 2024 IZAKAYA</p>
         </div>
     );
 };
