@@ -42,5 +42,5 @@ jobs:
             - name: Deploy to S3
               run: aws s3 sync ./public s3://${{ secrets.S3_CONTENTS_BUCKET }} --acl public-read
 
-            - name: Invalidate CloudFront Cache
-              run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+            #- name: Invalidate CloudFront Cache
+            #run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"

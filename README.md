@@ -31,10 +31,32 @@ yarn
 gatusby develop
 ```
 
-`localhost:8000`
+ブラウザで `localhost:8000`を確認してください。
 
 ビルド
 
 ```shell
 gatusby build
+```
+
+locales ファイル
+`locales/` フォルダ配下に 3 つのロケールのフォルダがあります。
+
+```
+locales/
+  - cz // チェコ語の翻訳フォルダ
+  - en // 英語の翻訳フォルダ
+  - ja // 日本語の翻訳フォルダ
+```
+
+英語を基本に開発しているので、`en/`フォルダ配下は触る必要はありません。
+
+ローカル開発時にビルドかデプロイをかけると、すべてのファイルが統合されて`translation.json`が生成されます。
+翻訳を修正する時には`translation.json`を触らないでください。
+
+```
+locales/**/
+  - main.json // ページ全般に関わる文言の翻訳
+  - privacy-policy.json // プライバシーポリシーページの翻訳
+  - takeaway.json // 持ち帰りページの翻訳
 ```
