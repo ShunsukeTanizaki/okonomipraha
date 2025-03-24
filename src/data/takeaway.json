@@ -209,7 +209,7 @@
                 "grams": "330ml",
                 "price": "70",
                 "image": "../images/takeaway/d-2.jpg",
-                "allergy": "",
+                "allergy": "-",
                 "note": "Matcha 0.3%"
             },
             {
@@ -231,7 +231,7 @@
                 "grams": "250ml",
                 "price": "70",
                 "image": "../images/takeaway/d-4.jpg",
-                "allergy": "",
+                "allergy": "-",
                 "note": "No sugar"
             }
         ]
