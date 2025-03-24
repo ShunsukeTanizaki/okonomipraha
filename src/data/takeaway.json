@@ -2,7 +2,7 @@
     {
         "id": "1",
         "name": "Okonomiyaki",
-        "note": "Japanese cabbage pancake with special Okonomiyaki sauce and Japanese mayo. With ''Katsuo Bushi'' (Tuna flake )",
+        "note": "Japanese cabbage pancake with special Okonomiyaki sauce and Japanese mayo. With ''Katsuo Bushi'' (Tuna flake)",
         "items": [
             {
                 "id": "M-1",
@@ -57,7 +57,7 @@
                 "price": "280",
                 "image": "../images/takeaway/m-5.jpg",
                 "allergy": "3, 6",
-                "note": "Soft omelet topped on chicken fried rice."
+                "note": "Soft omelet topped on chicken fried rice"
             }
         ]
     },
@@ -75,7 +75,7 @@
                 "price": "380",
                 "image": "../images/takeaway/b-1.jpg",
                 "allergy": "1, 3, 6, 10",
-                "note": "Panko fried pork, shiitake, onion, jalapeño cheese."
+                "note": "Panko fried pork, shiitake, onion, jalapeño cheese"
             },
             {
                 "id": "B-2",
@@ -86,18 +86,18 @@
                 "price": "300",
                 "image": "../images/takeaway/b-2.jpg",
                 "allergy": "3, 6",
-                "note": "Japanese style Fried chicken and Japanese mayonnaise."
+                "note": "Japanese style Fried chicken and Japanese mayonnaise"
             },
             {
                 "id": "B-3",
-                "display": false,
+                "display": true,
                 "stock": 1,
-                "name": "Teriyaki Tofu and Veg",
+                "name": "Tofu and steamed Veg",
                 "grams": "600g",
                 "price": "260",
                 "image": "../images/takeaway/b-3.jpg",
-                "allergy": "-",
-                "note": "Vegan meal =Teppanyaki tofu seasoning with Gluten free Teriyaki sauce."
+                "allergy": "6",
+                "note": "Sukiyaki style tofu with steamed vegtables"
             },
             {
                 "id": "B-4",
@@ -108,7 +108,7 @@
                 "price": "280",
                 "image": "../images/takeaway/b-4.jpg",
                 "allergy": "1, 6",
-                "note": "Vegan meal = Fried Japanese style Gyoza dumpling with house made PONZU citrus soy sauce."
+                "note": "Vegan meal = Fried Japanese style Gyoza dumpling with house made PONZU citrus soy sauce"
             }
         ]
     },
@@ -126,7 +126,7 @@
                 "price": "80",
                 "image": "../images/takeaway/s-1.jpg",
                 "allergy": "6",
-                "note": "Vegan soup = Tofu, Wakame, spring onion."
+                "note": "Vegan soup = mushroom, Wakame,"
             },
             {
                 "id": "S-2",
@@ -137,7 +137,7 @@
                 "price": "240",
                 "image": "../images/takeaway/s-2.jpg",
                 "allergy": "3, 4, 6, 10",
-                "note": "Japanese fish broth pot-au-feu. (NARUTO, Hanpen-fluffy fish cake, Konnyaku-mannan potato cake, daikon radish, grilled tofu, shiitake, egg)"
+                "note": "Japanese fish broth pot-au-feu. (NARUTO, Chikuwa , daikon radish, grilled tofu, shiitake, egg)"
             },
             {
                 "id": "S-3",
@@ -154,12 +154,12 @@
                 "id": "S-4",
                 "display": true,
                 "stock": 1,
-                "name": "Assort of Tsukemono Pickles and Kimchi.",
+                "name": "Assort of Tsukemono Pickles and Kimchi",
                 "grams": "150g",
                 "price": "150",
                 "image": "../images/takeaway/s-4.jpg",
                 "allergy": "-",
-                "note": "Vegan = Season Tsukemono style Japanese pickles and house made kimuchi."
+                "note": "Vegan = Season Tsukemono style Japanese pickles and house made kimuchi"
             },
             {
                 "id": "S-5",
@@ -199,7 +199,7 @@
                 "price": "70",
                 "image": "../images/takeaway/d-1.jpg",
                 "allergy": "-",
-                "note": "Osaka Hata brand Japanese soda."
+                "note": "Osaka Hata brand Japanese soda"
             },
             {
                 "id": "D-2",

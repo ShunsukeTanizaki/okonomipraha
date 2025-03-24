@@ -27,6 +27,8 @@ module.exports = {
                 defaultLanguage: `cs`,
                 siteUrl: `https://www.okonomipraha.cz/`,
                 i18nextOptions: {
+                    ns: ['translation'], // 1つの JSON に統合されるので "translation" のみ
+                    defaultNS: 'translation',
                     interpolation: {
                         escapeValue: false, // Reactはエスケープを自動処理
                     },
