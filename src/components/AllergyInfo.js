@@ -47,12 +47,12 @@ const AllergyInfo = () => {
     return (
         <div className="allergy-info">
             <a className="allergy-info--text" onClick={openModal}>
-                {t('“For allergy sufferers”')}
+                “{t('For allergy sufferers')}”
             </a>
             <Modal
                 isOpen={isModalOpen}
                 onClose={closeModal}
-                title={t('Informane o alergenech')}
+                title={t('Allergy information')}
                 content={t(
                     'All allergy information can be provided by the staff.'
                 )}

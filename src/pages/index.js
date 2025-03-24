@@ -75,7 +75,7 @@ const Top = ({ data }) => {
             <div className="takeaway">
                 <div className="takeaway__info">
                     <h1>{t('TAKE AWAY MENU')}</h1>
-                    <p>{t('One Take away package 20,-')}</p>
+                    <p>{t('One Take away package')} 20,-</p>
                     <h3 className="takeaway__info--open">
                         {t('12:00-14:00 / 17:00-21:00')}
                     </h3>
@@ -89,7 +89,7 @@ const Top = ({ data }) => {
                                 {t(category.name)}
                             </h2>
                             <p className="takeaway__gallery--note">
-                                {category.note}
+                                {t(category.note)}
                             </p>
                             <div className="takeaway__category">
                                 {category.items
@@ -167,27 +167,42 @@ const Top = ({ data }) => {
 
                 <div className="takeaway__others">
                     <h2 className="menu-category">{t('Recommendation')}</h2>
-                    <h3>Share for 2</h3>
-                    <h4>O2-1 Top hits set 750,-</h4>
+                    <h3>{t('Share for 2')}</h3>
+                    <h4>
+                        O2-1 {t('Top hits set')} 800,-
+                        <br class="br-sp" />
+                        {t(' ')}
+                        <span>({t('include package')})</span>
+                    </h4>
                     <p>
-                        <span>○KARAAGE</span>
-                        <span>○Gyoza</span>
-                        <span>○Japanese rice</span>
-                        <span>○Okonomiyaki Pork</span>
+                        <span>○{t('KARAAGE')}</span>
+                        <span>○{t('Gyoza')}</span>
+                        <span>○{t('Okonomiyaki Pork')}</span>
+                        <span>○{t('Japanese rice')}</span>
                     </p>
-                    <h4>O2-2 Vegan set 750,-</h4>
+                    <h4>
+                        O2-2 {t('Vegan set')} 800,-
+                        <br class="br-sp" />
+                        {t(' ')}
+                        <span>({t('include package')})</span>
+                    </h4>
                     <p>
-                        <span>○Tsukemono</span>
-                        <span>○Gyoza x 2</span>
-                        <span>○Wakame</span>
-                        <span>○Japanese rice x 2</span>
+                        <span>○{t('Tsukemono')}</span>
+                        <span>○{t('Gyoza vegan')}</span>
+                        <span>○{t('Wakame')}</span>
+                        <span>○{t('Tofu & Vegtables')}</span>
                     </p>
-                    <h4>O2-3 Osaka set 780,-</h4>
+                    <h4>
+                        O2-3 {t('Osaka set')} 850,-
+                        <br class="br-sp" />
+                        {t(' ')}
+                        <span>({t('include package')})</span>
+                    </h4>
                     <p>
-                        <span>○Takoyaki</span>
-                        <span>○Kushi Katsu</span>
-                        <span>○Okonomiyaki Chicken Egg</span>
-                        <span>○Japanese rice</span>
+                        <span>○{t('Takoyaki')}</span>
+                        <span>○{t('Kushi katsu')}</span>
+                        <span>○{t('Okonomiyaki Chicken Egg')}</span>
+                        <span>○{t('Japanese rice')}</span>
                     </p>
                 </div>
             </div>
