@@ -37,11 +37,10 @@ jobs:
               with:
                   aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
                   aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-                  # aws-region: eu-central-1
-                  aws-region: us-east-1
+                  aws-region: eu-central-1
 
             - name: Deploy to S3
-              run: aws s3 sync ./public s3://${{ secrets.S3_CONTENTS_BUCKET_DEV }}
+              run: aws s3 sync ./public s3://${{ secrets.S3_CONTENTS_BUCKET_DEV }} --acl public-read
 
-            - name: Invalidate CloudFront Cache
-              run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID_DEV }} --paths "/*"
+            #- name: Invalidate CloudFront Cache
+            # run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID_DEV }} --paths "/*"
