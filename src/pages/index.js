@@ -72,7 +72,7 @@ const Top = ({ data }) => {
                     <div className="top__kv--line"></div>
                 </div>
                 <ExternalLinkButton
-                    textKey="Booking Seats"
+                    textKey={t('Booking Seats')}
                     link="https://matsuri.menu55.cz/reservation.asp"
                     color="#ff1493"
                     size="L"

@@ -13,7 +13,7 @@ const Footer = () => {
                     <div className="footer__block">
                         <h3>{t('Reservation & contact')}</h3>
                         <ExternalLinkButton
-                            textKey="Booking Seats"
+                            textKey={t('Booking Seats')}
                             link="https://matsuri.menu55.cz/reservation.asp"
                             color="#333"
                             size="M"
