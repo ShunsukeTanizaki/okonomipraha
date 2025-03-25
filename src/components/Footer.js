@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
+import ExternalLinkButton from './ExternalLinkButton';
 import CookieReset from './CookieReset';
 
 const Footer = () => {
@@ -11,6 +12,12 @@ const Footer = () => {
                 <div className="footer__inner">
                     <div className="footer__block">
                         <h3>{t('Reservation & contact')}</h3>
+                        <ExternalLinkButton
+                            textKey="Booking Seats"
+                            link="https://matsuri.menu55.cz/reservation.asp"
+                            color="#333"
+                            size="M"
+                        />
                         <ul className="footer__block--list">
                             <li>
                                 <a href="tel:+420606786822">
@@ -60,6 +67,7 @@ const Footer = () => {
                             ></iframe>
                         </div>
                         <a
+                            className="footer__map--link"
                             href="https://maps.app.goo.gl/DqBJrs6ehK3W5M1HA"
                             target="blank"
                         >

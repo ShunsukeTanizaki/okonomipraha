@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
+import ExternalLinkButton from '../components/ExternalLinkButton';
 import AllergyInfoWithModal from '../components/AllergyInfo';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { useEffect, useState } from 'react';
@@ -70,6 +71,12 @@ const Top = ({ data }) => {
                     </div>
                     <div className="top__kv--line"></div>
                 </div>
+                <ExternalLinkButton
+                    textKey="Booking Seats"
+                    link="https://matsuri.menu55.cz/reservation.asp"
+                    color="#ff1493"
+                    size="L"
+                />
             </div>
 
             <div className="takeaway">
@@ -170,7 +177,7 @@ const Top = ({ data }) => {
                     <h3>{t('Share for 2')}</h3>
                     <h4>
                         O2-1 {t('Top hits set')} 800,-
-                        <br class="br-sp" />
+                        <br className="br-sp" />
                         {t(' ')}
                         <span>({t('include package')})</span>
                     </h4>
@@ -182,7 +189,7 @@ const Top = ({ data }) => {
                     </p>
                     <h4>
                         O2-2 {t('Vegan set')} 800,-
-                        <br class="br-sp" />
+                        <br className="br-sp" />
                         {t(' ')}
                         <span>({t('include package')})</span>
                     </h4>
@@ -194,7 +201,7 @@ const Top = ({ data }) => {
                     </p>
                     <h4>
                         O2-3 {t('Osaka set')} 850,-
-                        <br class="br-sp" />
+                        <br className="br-sp" />
                         {t(' ')}
                         <span>({t('include package')})</span>
                     </h4>
@@ -254,6 +261,10 @@ export const Head = () => (
             rel="stylesheet"
             href="https://unpkg.com/ress/dist/ress.min.css"
         />
+        <link
+            href="https://use.fontawesome.com/releases/v6.2.0/css/all.css"
+            rel="stylesheet"
+        ></link>
         {/* <link rel="stylesheet" href="../styles/index.scss" /> */}
     </>
 );

@@ -1,0 +1,67 @@
+@use 'global.scss' as g;
+@use '_var.scss' as v;
+
+.external-link-button {
+    display: inline-block;
+
+    &__content {
+        color: v.$color--font;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        text-align: center;
+        background: v.$color--white;
+        border: 1px solid var(--line-color);
+        position: relative;
+        display: block;
+        overflow: hidden;
+        transition: 0.3s;
+        border-radius: 100px;
+        text-decoration: none;
+
+        &:after {
+            font-family: 'FontAwesome';
+            content: '\f138';
+            position: absolute;
+            right: 20px;
+            color: var(--line-color);
+        }
+
+        &:hover:after {
+            animation: fuwafuwa 1s linear infinite;
+        }
+    }
+
+    // S, M, L のサイズ
+    &--s .external-link-button__content {
+        font-size: 12px;
+        line-height: 36px;
+        width: 140px;
+        height: 36px;
+    }
+
+    &--m .external-link-button__content {
+        font-size: 16px;
+        line-height: 48px;
+        width: 220px;
+        height: 48px;
+    }
+
+    &--l .external-link-button__content {
+        font-size: 24px;
+        line-height: 60px;
+        width: 320px;
+        height: 60px;
+    }
+}
+
+@keyframes fuwafuwa {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-8px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
