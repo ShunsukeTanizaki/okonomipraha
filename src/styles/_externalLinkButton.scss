@@ -19,6 +19,7 @@
         text-decoration: none;
 
         &:after {
+            font-weight: normal;
             font-family: 'FontAwesome';
             content: '\f138';
             position: absolute;
