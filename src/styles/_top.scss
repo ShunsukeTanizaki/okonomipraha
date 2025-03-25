@@ -3,11 +3,11 @@
 @use './mixin.scss' as m;
 
 .top {
-    margin: -60px 0 60px;
+    margin: -60px 0 48px;
     text-align: center;
 
     @include m.bp {
-        margin: -60px 0 24px;
+        margin: -60px 0 32px;
     }
 
     &__kv {
@@ -37,6 +37,10 @@
             margin-left: calc(-50vw + 50%);
             margin-right: calc(-50vw + 50%);
         }
+    }
+
+    .external-link-button {
+        margin-top: 32px;
     }
 }
 
